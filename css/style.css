@@ -163,26 +163,31 @@ section {
     display: flex;
   }
 
+  /* Ocultar menú por defecto */
   .nav-menu {
     position: absolute;
-    top: 70px;
+    top: 80px;
     right: 0;
     width: 100%;
     background: white;
     display: none;
     flex-direction: column;
-    padding: 20px 0;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   }
 
+  /* Mostrar cuando está activo */
   .nav-menu.active {
     display: flex;
   }
 
+  /* Links en columna */
   .nav-links {
     flex-direction: column;
-    align-items: center;
     gap: 20px;
   }
+
+
 
   .dropdown-menu {
     position: static;
