@@ -141,8 +141,30 @@ section {
   color: #222;
   text-decoration: none;
 }
+/* MENU HAMBURHUESA- MOBILE */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* RESPONSIBE MENUMENU- MOBILE */
+
+
+
 
 /* MENU */
+
+
+
 
 .nav-links {
   list-style: none;
@@ -210,7 +232,7 @@ section {
   visibility: visible;
 }
 
-/* BOTÓN CONTACTO */
+/* BOTÓN section-CONTACTO */
 
 .btn-nav {
   padding: 10px 18px;
@@ -226,7 +248,7 @@ section {
 
 /* HOME */
 
-/* HOME - SOBRE PREVIEW */
+
 
 .home-sobre-preview {
   padding: 120px 0;
@@ -282,70 +304,84 @@ section {
 
 
 
-
-
-
-
-
-
-
-
-
+/* HOME-HERO- */
 /* HERO */
-
 .hero {
-  background-color: #f5f5f5;
-  padding: 140px 20px;
+  
+  position: relative;
+  background-image: url("../assets/img/img-testimonio-ecoa.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 180px 20px;
   text-align: center;
+  color: white;
+  overflow: hidden;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  align-items: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
 }
 
+/* CONTENEDOR */
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* TITULO */
 .hero h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
+  font-size: 46px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #2f3b8f;
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+/* TEXTO */
 .hero p {
   font-size: 18px;
-  margin-bottom: 30px;
-  color: black;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: white;
+   text-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
-/* BOTONES */
-
+/* BOTÓN */
 .btn-primary {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 14px 32px;
   background-color: #2f3b8f;
   color: #fff;
   text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s ease;
-
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #1f2760;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(47, 59, 143, 0.2);
   background: var(--gradiente-marca);
 }
 
-.btn-secondary {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: 1px solid #2f3b8f;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #2f3b8f;
-  transition: 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background-color: #2f3b8f;
-  color: #fff;
-  background: var(--gradiente-marca);
-}
-
-/* SECCIONES */
+/* HOME- SECCIONES */
 
 
 .section-header {
@@ -358,7 +394,7 @@ section {
   margin-bottom: 10px;
 }
 
-/* CARDS */
+/* SECTION- CARDS */
 
 .cards-3 {
   display: grid;
@@ -366,17 +402,33 @@ section {
   gap: 32px;
   
 }
-
+/* CARD */
 .card {
   background-color: #ffffff;
   padding: 40px 30px;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-  min-height: 220px;
+  min-height: 240px;
   position: relative;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: all 0.3s ease;
 }
 
+/* ANIMACION HOVER- CARDS */
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+
+  background: linear-gradient(180deg, #ffffff 0%, #f9f9ff 100%);
+}
+
+/* EFECTO EN LINEA SUPERIOR CARDS */
 .card::before {
   content: "";
   position: absolute;
@@ -385,6 +437,21 @@ section {
   width: 100%;
   height: 4px;
   background: var(--gradiente-marca);
+  transition: height 0.3s ease;
+}
+
+.card:hover::before {
+  height: 6px;
+}
+/* MEJORA EN EL BOTON */
+.card .btn-secondary {
+  margin-top: 20px;
+  align-self: flex-start;
+  font-size: 14px;
+}
+/* MICROINTERACCION EN EL BOTON */
+.card .btn-secondary:hover {
+  transform: translateX(4px);
 }
 
 .card h3 {
@@ -396,22 +463,73 @@ section {
   text-align: left;
 }
 
-/* IMAGEN FULL WIDTH */
-
+/* IMAGEN FULL WIDTH EN HOME */
 .imagen-full {
-  height: 400px;
-  background-color: #ddd; /* luego reemplazar por imagen real */
+  position: relative;
+  height: 420px;
+  background-image: url("../assets/img/img-programasformativos.jpg");
+  background-size: cover;
+  background-position: center 20%;
+  background-attachment: fixed; /* efecto parallax suave */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.imagen-full::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.contenido-imagen {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+.contenido-imagen h2 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 0 6px 25px rgba(0,0,0,0.5);
+}
+
+
+/* HOME- CTA FINAL */
 
 /* CTA FINAL */
-
 .cta-final {
-  background-color: #f0f0f0;
+  background: linear-gradient(180deg, #f8f9fc 0%, #eef1f7 100%);
+  padding: 100px 20px;
   text-align: center;
-
+  border-radius: 24px;
+  max-width: 100%;
+  margin: 120px auto;
+  .cta-final {
+  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+}
 }
 
+.cta-final h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.cta-final p {
+  font-size: 17px;
+  color: #555;
+  margin-bottom: 30px;
+}
+.cta-final .btn-primary {
+  padding: 16px 32px;
+  font-size: 16px;
+}
 /* RESPONSIVE */
 
 @media (max-width: 992px) {
@@ -424,11 +542,13 @@ section {
   }
 }
 
+/* PAGINAS PRINCIPALES *1/4 /
 
-/* ACOMPAÑAMIENTO SECTION */
+
+/* ACOMPAÑAMIENTO- SECTION *1 /
 
 
-/* HERO*/
+/* ACOMPAÑAMIENTO- HERO*/
 
 .acompanamiento-hero {
   position: relative;
@@ -486,10 +606,6 @@ section {
 
 
 
-
-
-
-
 /* BLOQUE FORMAS DE ACOMPAÑAMIENTO*/
 
 .acompanamiento-hub {
@@ -525,7 +641,7 @@ section {
   gap: 60px;
 }
 
-/* Cards */
+/* ACOMPAÑAMIENTO- Cards */
 
 .hub-card {
   display: block;
@@ -600,7 +716,7 @@ section {
   letter-spacing: 0.5px;
 }
 
-/* Responsive */
+/*  ACOMPAÑAMIENTO-Responsive */
 
 @media (max-width: 992px) {
   .hub-grid {
@@ -681,16 +797,25 @@ section {
   }
 }
 
-/* Pagina interna 1*/
+
+/* SUB SECCIONES DEL SITIO- 1/3*/
 
 
 
 
-/* HERO */
+/* SECTION- COACHING INDIVIDUAL 1*/
+
+
+
+/* CIACHING INDIVIDUAL-HERO */
 
 .coaching-hero {
-  padding: 120px 20px;
-  background-color: #f5f5f5;
+  position: relative;
+  background-image: url("../assets/img/coaching\ individual.jpeg"); 
+  background-size: cover;
+  background-position: center;
+  padding: 140px 0;
+  color: white;
   text-align: center;
 }
 
@@ -709,7 +834,7 @@ section {
 
 
 
-/* SECCIONES GENERALES */
+/* COACHING INDIVIDUAL- SECCIONES GENERALES */
 
 
 
@@ -766,14 +891,14 @@ ul li::before {
   margin-bottom: 10px;
 }
 
-/* CTA FINAL */
+/* COACHING INDIVIDUl-CTA FINAL */
 
 .coaching-cta {
   background-color: #f0f0f0;
   text-align: center;
 }
 
-/* RESPONSIVE */
+/* COACHING INDDIVIDUAL- RESPONSIVE */
 
 @media (max-width: 992px) {
   .timeline {
@@ -784,7 +909,41 @@ ul li::before {
     font-size: 32px;
   }
 }
-/* TRABAJO CON EQUIPOS */
+@media (max-width: 768px) {
+  .coaching-row {
+    flex-direction: column;
+  }
+
+  .coaching-box {
+    width: 100%;
+  }
+}
+
+.coaching-row {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.coaching-box {
+  width: 50%;
+  text-align: left;
+}
+
+/* Evita que los textos se centren dentro de coaching */
+.coaching-box p {
+  margin: 0 0 20px 0;
+  max-width: none;
+  text-align: left;
+}
+
+
+
+
+/* SUB SECCIONES DEL SITIO *2/3 /
+
+
+/* PAGINA - TRABAJO CON EQUIPOS *2/
 
 
 
@@ -796,13 +955,53 @@ h1 {
 
 
 
-
-
-
-/* HERO */
+//* HERO TRABAHO CON EQUIPOS */
 .equipos-hero {
+  position: relative;
+  background-image: url("../assets/img/img-testimonio-ecoa2.jpg");
+  background-size: cover;
+  background-position: center 30%; /* mejor encuadre */
+  padding: 160px 0;
+  color: white;
   text-align: center;
-  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+/* OVERLAY (CLAVE) */
+.equipos-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* más contraste */
+  
+}
+
+/* CONTENIDO ARRIBA DEL OVERLAY */
+.equipos-hero .container {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+/* TITULO */
+.equipos-hero h1 {
+  font-size: 44px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* TEXTO */
+.equipos-hero p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #eaeaea;
+  margin-bottom: 30px;
+}
+
+/* BOTÓN */
+.equipos-hero .btn-primary {
+  padding: 14px 28px;
+  font-size: 16px;
 }
 
 /* GRID */
@@ -861,13 +1060,13 @@ ul li::before {
   color: #2f3b8f;
 }
 
-/* CTA */
+/* TRABAJO CON EQUIPOS-CTA FINAL */
 .equipos-cta {
   text-align: center;
   background-color: #f0f0f0;
 }
 
-/* Responsive */
+/* TRABAJO CON EQUIPOS- RESPONSIVE */
 @media (max-width: 992px) {
   .grid-4,
   .grid-3,
@@ -880,33 +1079,86 @@ ul li::before {
   }
 }
 
+/* SUB SECCIONES DEL SITIO-  SECTION FORMACIONES  3/3*/
 
-/* Acompañamiento section 3 FORMACIONES Y CAPACITACIONES */
 
+/*  SECTION FORMACIONES  3/3*/
 
+/* ============================= */
 /* HERO */
+/* ============================= */
 
 .formaciones-hero {
-  padding: 140px 20px;
+  position: relative;
+  background-image: url("../assets/img/img-programasformativos.jpg"); /* 👈 imagen charla */
+  background-size: cover;
+  background-position: center;
+  padding: 140px 0;
+  color: white;
   text-align: center;
-  background-color: #f5f5f5;
+}
+
+/* Overlay para legibilidad */
+.formaciones-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* Asegura que el contenido quede arriba */
+.formaciones-hero .container {
+  position: relative;
+  z-index: 2;
 }
 
 .formaciones-hero h1 {
   font-size: 42px;
   margin-bottom: 20px;
+  color: white;
 }
 
 .formaciones-hero p {
   font-size: 18px;
   margin-bottom: 30px;
+  color: white;
 }
 
+/* ============================= */
+/* BLOQUE CONCEPTUAL (QUE ES / TRABAJAMOS / BENEFICIOS) */
+/* ============================= */
 
+.coaching {
+  padding: 120px 0;
+  background-color: #ffffff;
+}
 
-/* SECCIONES */
+.coaching-row {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 80px;
+}
 
+.coaching-box {
+  width: 50%;
+}
 
+.coaching-box h2 {
+  margin-bottom: 20px;
+}
+
+.coaching-box p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.coaching-box ul {
+  margin-top: 20px;
+}
+
+/* ============================= */
+/* ELEMENTOS GENERALES */
+/* ============================= */
 
 hr {
   width: 60px;
@@ -916,18 +1168,15 @@ hr {
   margin: 15px 0 25px 0;
 }
 
-/* GRID */
+h2 {
+  line-height: 1.3;
+}
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+p {
+  line-height: 1.7;
 }
 
 /* LISTAS */
-
-
 
 ul li {
   margin-bottom: 10px;
@@ -942,24 +1191,70 @@ ul li::before {
   color: #2f3b8f;
 }
 
-/* BLOQUES */
+/* ============================= */
+/* GRID */
+/* ============================= */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ============================= */
+/* BLOQUES FORMATIVOS */
+/* ============================= */
 
 .bloque-formativo {
   background-color: #ffffff;
+  padding: 120px 0;
+  align-items: center;
 }
 
 .bloque-formativo.alt {
   background-color: #f8f8f8;
 }
 
-/* PLACEHOLDERS */
-
-.imagen-placeholder {
-  height: 320px;
-  background-color: #ddd;
-  border-radius: 12px;
+/* ECOA DESTACADO */
+.bloque-formativo:first-of-type {
+  background-color: #f9f9f9;
+  padding: 140px 0;
 }
 
+.bloque-formativo:first-of-type h2 {
+  font-size: 30px;
+}
+
+/* ============================= */
+/* IMÁGENES Y MEDIA */
+/* ============================= */
+
+.imagen-placeholder {
+  width: 100%;
+  height: 350px;
+  background-color: #ddd;
+  border-radius: 16px;
+}
+
+.bloque-img img {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+
+}
+.tag-ecoa {
+  display: inline-block;
+  background: #2f3b8f;
+  color: white;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
 .video-placeholder {
   height: 250px;
   background-color: #ccc;
@@ -973,40 +1268,15 @@ ul li::before {
   margin: 40px 0;
 }
 
-/* CTA FINAL */
+/* ============================= */
+/* CAPACITACIONES */
+/* ============================= */
 
-.cta-final {
-  background-color: #f0f0f0;
-  text-align: center;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 992px) {
-  .grid-2,
-  .videos-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .formaciones-hero h1 {
-    font-size: 32px;
-  }
-}
-
-
-
-/* Talleres propios bloque  */
-
-
-/* Contenedor general */
 .talleres-propios {
   padding: 120px 0;
   background-color: #ffffff;
 }
 
-
-
-/* Encabezado */
 .bloque-header {
   text-align: center;
   margin-bottom: 80px;
@@ -1024,9 +1294,6 @@ ul li::before {
   line-height: 1.6;
 }
 
-
-
-/* Grid principal */
 .talleres-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1035,15 +1302,6 @@ ul li::before {
   margin-bottom: 100px;
 }
 
-/* Imagen */
-.imagen-placeholder {
-  width: 100%;
-  height: 360px;
-  background-color: #ddd;
-  border-radius: 16px;
-}
-
-/* Contenido */
 .descripcion {
   margin-bottom: 30px;
   font-size: 16px;
@@ -1067,7 +1325,8 @@ ul li::before {
   font-size: 15px;
 }
 
-/* Temáticas */
+/* TEMÁTICAS */
+
 .tematicas {
   margin-bottom: 100px;
 }
@@ -1094,7 +1353,8 @@ ul li::before {
   font-size: 15px;
 }
 
-/* Galería */
+/* GALERÍA */
+
 .galeria {
   margin-bottom: 100px;
 }
@@ -1118,10 +1378,10 @@ ul li::before {
 }
 
 /* CTA */
+
 .taller-cta {
   text-align: center;
 }
-
 
 .micro-copy {
   margin-top: 12px;
@@ -1129,37 +1389,15 @@ ul li::before {
   color: #666;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-
-  .talleres-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .info-estructurada {
-    grid-template-columns: 1fr;
-  }
-
-  .tematicas-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .galeria-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-/* FORMACION EN ECOA BLOQUE 2*/
+/* ============================= */
+/* ECOA- PROGRAMA COMPLETO */
+/* ============================= */
 
 .ecoa {
   padding: 120px 0;
   background-color: #f9f9f9;
 }
 
-
-/* Encabezado */
 .ecoa-header {
   text-align: center;
   margin-bottom: 80px;
@@ -1184,7 +1422,6 @@ ul li::before {
   margin: 0 auto;
 }
 
-/* Grid principal */
 .ecoa-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1193,14 +1430,6 @@ ul li::before {
   margin-bottom: 100px;
 }
 
-.imagen-placeholder {
-  width: 100%;
-  height: 360px;
-  background-color: #ddd;
-  border-radius: 16px;
-}
-
-/* Información */
 .ecoa-descripcion {
   margin-bottom: 30px;
   font-size: 16px;
@@ -1224,7 +1453,6 @@ ul li::before {
   font-size: 15px;
 }
 
-/* Contexto institucional */
 .ecoa-contexto {
   text-align: center;
   margin-bottom: 100px;
@@ -1235,7 +1463,6 @@ ul li::before {
   margin-bottom: 15px;
 }
 
-/* Testimonios */
 .ecoa-testimonios {
   margin-bottom: 80px;
 }
@@ -1273,41 +1500,209 @@ ul li::before {
   color: #2f3b8f;
 }
 
-/* CTA */
 .ecoa-cta {
   text-align: center;
 }
 
+/* ECOA VALOR */
 
+.ecoa-valor {
+  text-align: center;
+  margin-top: 80px;
+}
 
-/* Responsive */
-@media (max-width: 992px) {
-  .ecoa-grid {
+.ecoa-valor h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.ecoa-valor p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #555;
+}
+
+/* TESTIMONIOS ECOA */
+
+.ecoa-testimonios {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.ecoa-testimonios h3 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+/* reutilizamos grid existente pero lo reforzamos */
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+
+.testimonio-card {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.testimonio-texto {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonio-autor {
+  font-size: 14px;
+  color: #777;
+}
+
+/* CTA */
+
+.ecoa-cta {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+//* ============================= */
+/* PROGRAMA DETALLE */
+/* ============================= */
+
+.programa-detalle {
+  padding: 120px 0;
+  background-color: #ffffff;
+  scroll-margin-top: 100px;
+}
+
+.programa-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.programa-header h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.programa-subtitulo {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #555;
+}
+
+/* GRID PRINCIPAL */
+
+.programa-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.programa-descripcion {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.programa-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.programa-info h4 {
+  color: #2f3b8f;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* ============================= */
+/* TEMÁTICAS */
+/* ============================= */
+
+.tematicas-detalle {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.tematicas-detalle h3 {
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+
+.tematicas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.tema {
+  padding: 18px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+/* ============================= */
+/* EXPERIENCIA */
+/* ============================= */
+
+.experiencia {
+  text-align: center;
+}
+
+.experiencia h3 {
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+
+.experiencia-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.experiencia-item {
+  height: 220px;
+  background-color: #ccc;
+  border-radius: 14px;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .programa-grid {
     grid-template-columns: 1fr;
   }
 
-  .ecoa-estructura {
+  .tematicas-grid {
     grid-template-columns: 1fr;
   }
 
-  .testimonios-grid {
+  .experiencia-grid {
     grid-template-columns: 1fr;
   }
 }
 
+/* ============================= */
+/* PROGRAMAS FORMATIVOS */
+/* ============================= */
 
-
-/* BLOQUE 3 COMPLPETO - PROGRAMAS FORMATIVOS* /
-
-
-/* CONTENEDOR GENERAL */
 .programas-formativos {
   padding: 120px 0;
   background-color: #f7f7f7;
 }
 
-
-/* HEADER */
 .programas-header {
   text-align: center;
   margin-bottom: 80px;
@@ -1321,14 +1716,13 @@ ul li::before {
 .programas-intro {
   font-size: 18px;
   max-width: 750px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 20px auto;
   line-height: 1.6;
   color: #555;
 }
 
-
-
 /* BLOQUES */
+
 .programa-bloque {
   display: flex;
   align-items: center;
@@ -1340,19 +1734,10 @@ ul li::before {
   flex-direction: row-reverse;
 }
 
-/* IMAGEN */
 .programa-imagen {
   flex: 1;
 }
 
-.imagen-placeholder {
-  width: 100%;
-  height: 350px;
-  background-color: #d9d9d9;
-  border-radius: 16px;
-}
-
-/* CONTENIDO */
 .programa-contenido {
   flex: 1;
 }
@@ -1370,54 +1755,94 @@ ul li::before {
 }
 
 .programa-contenido ul {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
-.programa-contenido ul li {
-  margin-bottom: 10px;
-  font-size: 15px;
-}
+/* ============================= */
+/* TESTIMONIOS */
+/* ============================= */
 
-
-
-/* CTA GENERAL */
-.programas-cta {
+.programas-testimonios {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
-.programas-cta p {
+.programas-testimonios h3 {
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.testimonio-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.testimonio-texto {
+  font-size: 15px;
+  line-height: 1.6;
   margin-bottom: 20px;
-  font-size: 16px;
+  color: #444;
+}
+
+.testimonio-autor {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2f3b8f;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .programa-bloque {
+    flex-direction: column;
+  }
+
+  .programa-bloque.reverse {
+    flex-direction: column;
+  }
+
+  .testimonios-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 
+/* SECCIONES PRINCIPALES DEL SITIO- SOBRE NOSOTRAS- 2/4*/
 
-
-
-
-/* SECCION - SOBRE NOSOTRAS*/
+/* - SOBRE NOSOTRAS- 2/4*/
 
 
 .sobre-nosotras {
   background: #ffffff;
 }
 
-/* HERO */
+/* SOBRE NOSOTRAS- HERO */
 .sobre-hero {
   position: relative;
-  height: 70vh;
-  min-height: 500px;
-  background: url("imagen-sobre.jpg") center/cover no-repeat;
-  display: flex;
+  background: url("../assets/img/img-\ hero-section.sobrenosotras.jpg") center/cover no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 140px 0;
   align-items: center;
   color: #fff;
+ 
 }
 
 .sobre-hero .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
@@ -1455,30 +1880,43 @@ p {
   margin-bottom: 120px;
   max-width: 800px;
 }
-
+.quienes-img{
+  margin: 40px 0;
+  text-align: center;
+}
+.quienes-img img{
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+}
 /* EQUIPO */
 .equipo {
   display: flex;
   flex-direction: column;
   gap: 120px;
   margin-bottom: 120px;
+  
 }
 
 .persona {
   display: flex;
   gap: 60px;
   align-items: center;
+ 
 }
 
 .persona.reverse {
   flex-direction: row-reverse;
+
 }
 
-.persona-img .imagen-placeholder {
+.persona-img img{
   width: 350px;
   height: 400px;
   background: #ddd;
   border-radius: 16px;
+  object-fit: cover;
+  
 }
 
 .persona-info {
@@ -1503,47 +1941,15 @@ blockquote {
   color: #2f3b8f;
 }
 
-/* FILOSOFÍA */
-.filosofia {
-  margin-bottom: 120px;
-  max-width: 800px;
-}
 
-/* VALORES */
-.valores {
-  margin-bottom: 120px;
-}
-
-.valores-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-.valor {
-  background: #f7f7f7;
-  padding: 40px;
-  border-radius: 16px;
-}
-
-.valor h4 {
-  margin-bottom: 10px;
-}
-
-/* RESPALDO */
-.respaldo {
-  margin-bottom: 120px;
-  max-width: 800px;
-}
-
-/* CTA FINAL */
+/* SOBRE NOSOTRAS- CTA FINAL */
 .cta-final {
   text-align: center;
 }
 
 
 
-/* RESPONSIVE */
+/*SOBRE NOSOTRAS- RESPONSIVE */
 @media (max-width: 992px) {
 
   .persona {
@@ -1568,20 +1974,113 @@ blockquote {
   }
 
 }
+.quienes-somos p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.quienes-somos .destacado {
+  margin-top: 30px;
+  font-weight: 500;
+  color: #2f3b8f;
+}
+/* ===================== */
+/* IDENTIDAD (NUEVO) */
+/* ===================== */
+
+.identidad {
+  margin-bottom: 120px;
+}
+
+/* HEADER */
+
+.identidad-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 80px auto;
+}
+
+.identidad-header h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.identidad-header p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* GRID */
+
+.identidad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* CARDS */
+
+.identidad-card {
+  background: #f7f7f7;
+  padding: 40px;
+  border-radius: 16px;
+}
+
+.identidad-card h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+/* VALORES (especial) */
+
+.valores-card {
+  background: #f0f0f0;
+}
+
+.valores-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.valores-lista li {
+  margin-bottom: 20px;
+}
+
+.valores-lista strong {
+  display: block;
+  color: #2f3b8f;
+  margin-bottom: 5px;
+}
+
+.valores-lista span {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .identidad-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 
+/*SECCIONES PRINCIPALES DEL SITIO-  SECCION METODO 3/4*/
 
-
-
-/* SECCION METODO*/
+/* SECCION METODO*3/4/
 
 
 .metodo {
   padding: 120px 0;
   background-color: #f9f9f9;
 }
-
+.
 
 /* HEADER */
 .metodo-header {
@@ -1703,7 +2202,8 @@ blockquote {
 
 
 
-/* SECCION CONTACTO */
+
+/* SECCION CONTACTO 4/4*/
 
 
 

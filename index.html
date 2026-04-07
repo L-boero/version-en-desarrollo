@@ -9,14 +9,22 @@
 </head>
 <body>
 
+
+
   <!-- MENU NAV -->
 
 <header class="navbar">
   <div class="container nav-container">
 
+    <div class="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
     <!-- Logo -->
     <div class="logo">
-      <a href="index.html">Boero Gonzzáles</a>
+      <a href="index.html">Boero González</a>
     </div>
 
     <!-- Navegación principal -->
@@ -47,7 +55,6 @@
 </header>
 
 
-
   <!-- HOME  -->
 <!DOCTYPE html>
 <html lang="es">
@@ -62,8 +69,11 @@
 <section class="hero">
   <div class="container hero-content">
     <h1>Expande tu potencial, impulsa tu pasión</h1>
-    <p> Coaching y capacitación</p>
-    <a href="contacto.html" class="btn-primary">Contactarnos</a>
+    <p>
+Acompañamos a personas, equipos y deportistas a lograr resultados reales,
+transformando su forma de pensar, sentir y actuar.
+</p>
+    <a href="contacto.html" class="btn-primary">Quiero más información</a>
   </div>
 </section>
 
@@ -73,27 +83,29 @@
   <div class="container">
     <div class="section-header">
       <h2>Qué hacemos</h2>
-      <p>Acompañamos procesos individuales y organizacionales.</p>
+      <p>Acompañamos procesos de trasformación profunda a travéz del coaching ontológico.
+        No se trata solo de lograr objetivos... se trata de convertirte en la persona que puede sostenerlos.
+      </p>
     </div>
 
     <div class="cards-3">
 
       <div class="card">
         <h3>Coaching Individual</h3>
-        <p>Procesos personalizados para líderes y deportistas que buscan claridad y crecimiento.</p>
-        <a href="./pages/sub-menu/coachingindi.html" class="btn-secondary">Ver proceso individual</a>
+        <p>Para quienes buscan claridad, bienestar y una vida con más sentido.</p>
+        <a href="./pages/sub-menu/coachingindi.html" class="btn-secondary btn-primary">Ver proceso individual</a>
       </div>
 
       <div class="card">
         <h3>Trabajo con Equipos</h3>
-        <p>Intervenciones diseñadas para fortalecer liderazgo, comunicación y cohesión organizacional.</p>
-        <a href="./pages/sub-menu/trabajoequip.html" class="btn-secondary">Explorar trabajo en equipos</a>
+        <p>Para quienes buscan mejorar su comunicación, alinearse y potenciar sus resultados.</p>
+        <a href="./pages/sub-menu/trabajoequip.html" class="btn-secondary btn-primary">Explorar trabajo en equipos</a>
       </div>
 
       <div class="card">
         <h3>Formaciones y Capacitaciones</h3>
-        <p>Talleres, programas y formación orientados al desarrollo profesional.</p>
-        <a href="./pages/sub-menu/formaciones.html" class="btn-secondary">Descubrir programas</a>
+        <p>Espacios de aprendizaje de liderazgo integral.</p>
+        <a href="./pages/sub-menu/formaciones.html" class="btn-secondary btn-primary">Descubrir programas</a>
       </div>
 
     </div>
@@ -105,6 +117,9 @@
 
 <!-- IMAGEN FULL WIDTH -->
 <section class="imagen-full">
+  <div class="contenido-imagen">
+   <h2>+10 años transformando personas y equipos</h2>
+  </div>
 </section>
 
 
@@ -140,7 +155,9 @@
   <div class="container home-sobre-grid">
 
     <div class="home-sobre-imagen">
-      <div class="imagen-placeholder"></div>
+      <div class="imagen-placeholder bloque-img">
+        <img src="./assets/img/capacitaciones.jpg" alt="">
+      </div>
     </div>
 
     <div class="home-sobre-contenido">
@@ -174,33 +191,31 @@
 
 
 
-
-
-
 <!-- CTA FINAL -->
 <section class="cta-final">
   <div class="container">
-    <h2>¿Listo para comenzar tu proceso?</h2>
-    <p>Conversemos y diseñemos el acompañamiento adecuado para vos o tu equipo.</p>
+    <h2>¿Listo para dar el siguiente paso?</h2>
+<p>
+Conversemos y diseñemos un proceso a tu medida, alineado a tus objetivos.
+</p>
     <a href="contacto.html" class="btn-primary">Agendar conversación</a>
   </div>
 </section>
 
-</body>
-</html>
+/* MENU HAMBURHUESA- MOBILE */
 
 
 
-</body>
-</html>
+  <!-- TODO tu contenido -->
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  if (toggle && navMenu) {
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  }
+</script>
 
 
-    
-</body>
-
-
-
-
-
-
-</html>
