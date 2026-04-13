@@ -1087,11 +1087,20 @@ html {
 
 /* COACHING INDIVIDUAL- SECCIONES GENERALES */
 
-
-section p {
+.coaching p {
   margin-bottom: 20px;
 }
 
+.coaching-proceso p {
+  margin-bottom: 10px;
+}
+.coaching-box h2 {
+  margin-bottom: 20px;
+}
+
+.coaching-box {
+  margin-bottom: 40px;
+}
 /* LISTAS */
 
 
@@ -1122,11 +1131,11 @@ ul li::before {
   font-size: 30px;
 }
 .timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
+
 /* STEP */
 .step {
   background: #ffffff;
@@ -1287,55 +1296,31 @@ ul li::before {
 
 /* COACHING INDDIVIDUAL- RESPONSIVE- (BLOQUE BENEFICIOS ) */
 
-
 @media (max-width: 768px) {
-
   .coaching-row {
     flex-direction: column;
-    gap: 30px;
   }
 
   .coaching-box {
     width: 100%;
-    text-align: center;
   }
-
-  .coaching-box p {
-    text-align: center;
-  }
-
 }
 
 /* RESPONSIVE - COACHING INDIVIDUAL ( TIMLINE ) */
+
 @media (max-width: 768px) {
-
   .timeline {
-    padding: 30px 20px;
+    grid-template-columns: 1fr;
   }
-
-  .step {
-    padding-bottom: 20px;
-  }
-
-  .step h3 {
-    font-size: 18px;
-  }
-
 }
 
 /* RESPONISVE COACHING INDIVIDUAL ( RESULTADO )*/
 @media (max-width: 768px) {
-
-  .result-list {
-    grid-template-columns: 1fr;
-  }
-@media (max-width: 768px) {
   .result-list {
     grid-template-columns: 1fr;
   }
 }
 
-}
 /* RESPONISVE COACHING INDIVIDUAL ( CTA FINAL )*/
 @media (max-width: 768px) {
 
@@ -1348,13 +1333,7 @@ ul li::before {
   }
 
 }
-/*  RESPONSIVE- COACHIN INDIVIDUAL- SECTION */
 
-@media (max-width: 768px) {
-  section {
-    padding: 80px 20px;
-  }
-}
 
 
 
