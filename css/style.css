@@ -1387,12 +1387,6 @@ ul li::before {
 
 
 
-h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-
 
 
 //* HERO TRABAHO CON EQUIPOS */
@@ -1611,55 +1605,88 @@ ul li::before {
   left: 0;
   color: #2f3b8f;
 }
+/* ============================= */
+/* MOBILE - TRABAJO CON EQUIPOS */
+/* ============================= */
 
-/* TRABAJO CON EQUIPOS-CTA FINAL */
 @media (max-width: 768px) {
 
-  .enfoque-list {
-    gap: 20px;
+  /* HERO */
+  .equipos-hero {
+    padding: 100px 20px;
   }
 
-  .enfoque-item {
+  .equipos-hero h1 {
+    font-size: 30px;
+  }
+
+  .equipos-hero p {
+    font-size: 16px;
+  }
+
+  /* BLOQUES (reutilizamos coaching) */
+  .coaching-row {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 25px;
+    gap: 40px;
   }
 
-  .enfoque-numero {
-    font-size: 14px;
-    margin-bottom: 8px;
+  .coaching-box {
+    width: 100%;
+    text-align: center;
   }
 
-  .enfoque-content h3 {
-    font-size: 18px;
+  .coaching-box p,
+  .coaching-box ul {
+    text-align: center;
   }
 
-  .enfoque-content p {
-    font-size: 15px;
+  /* LISTAS centradas */
+  .ideal-list {
+    padding-left: 0;
+    list-style-position: inside;
   }
 
-}
-@media (max-width: 768px) {
-
-  .enfoque-title {
-    font-size: 26px;
-  }
-
-  .enfoque-sub {
-    font-size: 15px;
+  /* ENFOQUE (cards verticales) */
+  .enfoque-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     padding: 0 15px;
   }
 
-}
-@media (max-width: 768px) {
-
   .enfoque-item {
-    border: 1px solid #eee;
-    background: #fff;
+    padding: 25px;
+  }
+
+  /* GRID 3 → 1 columna */
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* TIMELINE → vertical */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .step {
+    width: 100%;
+  }
+
+  /* RESULTADOS */
+  .result-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* CTA FINAL (coherente con coaching) */
+  .coaching-cta {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    text-align: center;
   }
 
 }
-
 
 /* SUB SECCIONES DEL SITIO-  SECTION FORMACIONES  3/3*/
 
