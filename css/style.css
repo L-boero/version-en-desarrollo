@@ -1098,7 +1098,9 @@ html {
 .coaching-box ul {
   text-align: left;
 }
-
+.coaching .container {
+  max-width: 700px;
+}
 /* LISTAS */
 
 
@@ -1307,10 +1309,19 @@ ul li::before {
 /* RESPONSIVE - COACHING INDIVIDUAL ( TIMLINE ) */
 
 @media (max-width: 768px) {
-  .timeline {
-    grid-template-columns: 1fr;
+
+  .coaching-proceso .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
+
+  .coaching-proceso .step {
+    width: 100%;
+  }
+
 }
+
 
 /* RESPONISVE COACHING INDIVIDUAL ( RESULTADO )*/
 @media (max-width: 768px) {
@@ -1333,18 +1344,10 @@ ul li::before {
 }
 
 @media (max-width: 768px) {
-
-  .timeline {
-    display: flex !important;
-    flex-direction: column !important;
+  .coaching {
+    padding-top: 40px;
   }
-
-  .step {
-    width: 100% !important;
-  }
-
 }
-
 
 
 
