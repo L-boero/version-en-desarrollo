@@ -268,7 +268,7 @@
     });
   });
 
-  // 🔥 dropdown en mobile
+  // 🔥 dropdown mobile
   const dropdown = document.querySelector('.dropdown > a');
 
   if (dropdown) {
@@ -280,19 +280,7 @@
     });
   }
 
-  // 🔥 cerrar menú al hacer click fuera
-  document.addEventListener('click', (e) => {
-    if (
-      navMenu.classList.contains('active') &&
-      !navMenu.contains(e.target) &&
-      !toggle.contains(e.target)
-    ) {
-      navMenu.classList.remove('active');
-    }
-  });
 </script>
-
-
 
 
 

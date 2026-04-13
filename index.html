@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boero Gonzales - web </title>
+    <title>Boero Gonzalez - web </title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./pages/acompañamiento/">
 </head>
@@ -177,7 +177,7 @@ transformando su forma de pensar, sentir y actuar.
         “La transformación comienza cuando alguien se anima a mirar diferente.”
       </blockquote>
 
-      <a href="./pages/sobrenosotras.html" class="btn-secondary btn-primary">
+      <a href="./pages/sobrenosotras.html" class="btn-secondary">
         Conocé nuestra historia
       </a>
 
@@ -228,7 +228,7 @@ Conversemos y diseñemos un proceso a tu medida, alineado a tus objetivos.
     });
   });
 
-  // 🔥 dropdown en mobile
+  // 🔥 dropdown mobile
   const dropdown = document.querySelector('.dropdown > a');
 
   if (dropdown) {
@@ -240,16 +240,6 @@ Conversemos y diseñemos un proceso a tu medida, alineado a tus objetivos.
     });
   }
 
-  // 🔥 cerrar menú al hacer click fuera
-  document.addEventListener('click', (e) => {
-    if (
-      navMenu.classList.contains('active') &&
-      !navMenu.contains(e.target) &&
-      !toggle.contains(e.target)
-    ) {
-      navMenu.classList.remove('active');
-    }
-  });
 </script>
 
   

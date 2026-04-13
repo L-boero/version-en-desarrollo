@@ -19,7 +19,9 @@ body {
   line-height: 1.6;
   background-color: #ffffff;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 /* ============================= */
 /* VARIABLES */
 /* ============================= */
@@ -165,17 +167,21 @@ section {
 
   /* Ocultar menú por defecto */
   .nav-menu {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 100%;
-    background: white;
-    display: none;
-    flex-direction: column;
-    padding: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 70px);
 
+  background: white;
+
+  display: none;
+  flex-direction: column;
+  padding: 30px 20px;
+  gap: 20px;
+
+  z-index: 999;
+}
   /* Mostrar cuando está activo */
   .nav-menu.active {
     display: flex;
@@ -192,12 +198,23 @@ section {
   .dropdown-menu {
     position: static;
     display: none;
+    padding-left: 10px;
+  }
+  .dropdown-menu li {
+    padding: 8px 0;
   }
 
   .dropdown.open .dropdown-menu {
     display: block;
   }
 }
+
+.dropdown > a::after {
+  content: "▼";
+  margin-left: 8px;
+  font-size: 10px;
+}
+
 
 
 
@@ -330,17 +347,6 @@ section {
   font-weight: 500;
   
 }
-
-@media (max-width: 992px) {
-  .home-sobre-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-sobre-imagen .imagen-placeholder {
-    height: 300px;
-  }
-}
-
 
 
 
@@ -577,6 +583,8 @@ section {
   padding: 16px 32px;
   font-size: 16px;
 }
+
+
 /* RESPONSIVE HOME MOBILE  */
 @media (max-width: 768px) {
 
@@ -1080,12 +1088,8 @@ html {
 /* COACHING INDIVIDUAL- SECCIONES GENERALES */
 
 
-
-
 section p {
-  max-width: 700px;
-  margin: 0 auto 20px auto;
-  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* LISTAS */
@@ -1117,20 +1121,18 @@ ul li::before {
   margin: 0 auto 30px;
   font-size: 30px;
 }
-
 .timeline {
-  max-width: 900px;
-  margin: 60px auto 0;
-  padding: 60px;
-  background: #fafafa;
-  border-radius: 20px;
-  border: 1px solid #eee;
-  margin-top: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
 /* STEP */
 .step {
-  padding-bottom: 25px;
-  border-bottom: 1px solid #eee;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #eee;
 }
 
 .step:last-child {
@@ -1251,45 +1253,108 @@ ul li::before {
   text-align: center;
 }
 
-/* COACHING INDDIVIDUAL- RESPONSIVE */
 
-@media (max-width: 992px) {
-  .timeline {
-    grid-template-columns: 1fr;
+
+/* COACHING INDDIVIDUAL- RESPONSIVE-*/
+
+
+/* COACHING INDDIVIDUAL- RESPONSIVE- HERO*/
+
+
+@media (max-width: 768px) {
+
+  .coaching-hero {
+    padding: 100px 20px;
+    text-align: center;
+    background-position: center;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+    text-align: center;
   }
 
   .coaching-hero h1 {
     font-size: 32px;
   }
+
+  .coaching-hero p {
+    font-size: 16px;
+    margin: 0 auto 25px auto;
+  }
+
 }
+
+/* COACHING INDDIVIDUAL- RESPONSIVE- (BLOQUE BENEFICIOS ) */
+
+
 @media (max-width: 768px) {
+
   .coaching-row {
     flex-direction: column;
+    gap: 30px;
   }
 
   .coaching-box {
     width: 100%;
+    text-align: center;
+  }
+
+  .coaching-box p {
+    text-align: center;
+  }
+
+}
+
+/* RESPONSIVE - COACHING INDIVIDUAL ( TIMLINE ) */
+@media (max-width: 768px) {
+
+  .timeline {
+    padding: 30px 20px;
+  }
+
+  .step {
+    padding-bottom: 20px;
+  }
+
+  .step h3 {
+    font-size: 18px;
+  }
+
+}
+
+/* RESPONISVE COACHING INDIVIDUAL ( RESULTADO )*/
+@media (max-width: 768px) {
+
+  .result-list {
+    grid-template-columns: 1fr;
+  }
+@media (max-width: 768px) {
+  .result-list {
+    grid-template-columns: 1fr;
   }
 }
 
-.coaching-row {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 60px;
 }
+/* RESPONISVE COACHING INDIVIDUAL ( CTA FINAL )*/
+@media (max-width: 768px) {
 
-.coaching-box {
-  width: 50%;
-  text-align: left;
+  .coaching-cta h2 {
+    font-size: 26px;
+  }
+
+  .coaching-cta p {
+    font-size: 16px;
+  }
+
 }
+/*  RESPONSIVE- COACHIN INDIVIDUAL- SECTION */
 
-/* Evita que los textos se centren dentro de coaching */
-.coaching-box p {
-  margin: 0 0 20px 0;
-  max-width: none;
-  text-align: left;
+@media (max-width: 768px) {
+  section {
+    padding: 80px 20px;
+  }
 }
-
 
 
 
