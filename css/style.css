@@ -1086,22 +1086,18 @@ html {
 
 
 /* COACHING INDIVIDUAL- SECCIONES GENERALES */
-
-.coaching p {
-  margin-bottom: 20px;
-}
-
-.coaching-proceso p {
-  margin-bottom: 10px;
-}
-.coaching-box h2 {
-  margin-bottom: 20px;
+.coaching {
+  text-align: left;
 }
 
 .coaching-box {
-  margin-bottom: 40px;
+  text-align: left;
 }
 
+.coaching-box p,
+.coaching-box ul {
+  text-align: left;
+}
 
 /* LISTAS */
 
@@ -1332,6 +1328,19 @@ ul li::before {
 
   .coaching-cta p {
     font-size: 16px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .timeline {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .step {
+    width: 100% !important;
   }
 
 }
