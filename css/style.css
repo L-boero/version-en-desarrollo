@@ -2954,6 +2954,8 @@ blockquote {
 
   .quienes-somos {
     text-align: center;
+    margin-top: 60px;
+    padding: 0 10px;
   }
 
   .quienes-somos h2 {
@@ -2964,45 +2966,81 @@ blockquote {
     max-width: 100%;
     margin-bottom: 80px;
   }
+  .quienes-somos p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
 
 }
 
 /* RESPONSIVE- CONTENIDO ( EQUIPO)    */
 
-@media (max-width: 768px) {
 
-  .equipo {
+
+  @media (max-width: 768px) {
+  .equipo{
     gap: 80px;
   }
-
   .persona {
+    flex-direction: column;
     gap: 30px;
     text-align: center;
+  }
+
+  .persona.reverse {
+    flex-direction: column;
   }
 
   .persona-img img {
     width: 100%;
     height: auto;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .persona-info {
+    width: 100%;
   }
 
   .persona-info h3 {
     font-size: 24px;
   }
 
+  .persona-info p {
+    font-size: 15px;
+  }
+
 }
 /* RESPONISVE- CONTENIDO ( IDENTIDAD)    */
 @media (max-width: 768px) {
+
+  .identidad {
+    margin-top: 60px;
+  }
+
+  .identidad-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .identidad-card {
+    padding: 25px;
+  }
 
   .identidad-header h2 {
     font-size: 28px;
   }
 
-  .identidad-card {
-    padding: 30px;
+}
+/* RESPONISVE- IMAGEN ( IMG DE LAS DOS)    */
+@media (max-width: 768px) {
+
+  .quienes-img img {
+    max-width: 100%;
+    margin-bottom: 80px;
   }
 
 }
-
 
 
 
