@@ -198,7 +198,7 @@ transformando su forma de pensar, sentir y actuar.
 <p>
 Conversemos y diseñemos un proceso a tu medida, alineado a tus objetivos.
 </p>
-   <a href="https://wa.me/543424661203" target="_blank" class="hero-cta">
+   <a href="https://wa.me/543424661203" target="_blank" class="hero-cta btn-primary">
   Agendar una conversación
 </a>
   </div>
@@ -218,6 +218,25 @@ Conversemos y diseñemos un proceso a tu medida, alineado a tus objetivos.
       navMenu.classList.toggle('active');
     });
   }
+</script>
+
+<script>
+  const links = document.querySelectorAll('.nav-links a');
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
+
+  const dropdown = document.querySelector('.dropdown > a');
+
+  dropdown.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      dropdown.parentElement.classList.toggle('open');
+    }
+  });
 </script>
 
   
