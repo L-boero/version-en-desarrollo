@@ -1332,6 +1332,11 @@ ul li::before {
 
 /* RESPONISVE COACHING INDIVIDUAL ( CTA FINAL )*/
 @media (max-width: 768px) {
+  .coaching-cta {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    margin-top: 60px;
+  }
 
   .coaching-cta h2 {
     font-size: 26px;
@@ -1349,6 +1354,30 @@ ul li::before {
   }
 }
 
+/* RESPONSIVE COACHING INDIVIDUAL TEXTOS */
+
+@media (max-width: 768px) {
+
+  .coaching h2,
+  .coaching p,
+  .coaching ul {
+    text-align: center;
+  }
+
+  .coaching-box {
+    text-align: center;
+  }
+
+}
+/* RESPONSIVE COACHING INDIVIDUAL LISTA */
+@media (max-width: 768px) {
+
+  .ideal-list {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+}
 
 
 /* SUB SECCIONES DEL SITIO *2/3 /
