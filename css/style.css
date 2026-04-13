@@ -2665,7 +2665,7 @@ align-items: flex-end;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 120px 0;
+  padding:  0;
 }
 
 
@@ -2807,43 +2807,6 @@ blockquote {
 }
 
 
-
-/*SOBRE NOSOTRAS- RESPONSIVE */
-@media (max-width: 992px) {
-
-  .persona {
-    flex-direction: column;
-  }
-
-  .persona.reverse {
-    flex-direction: column;
-  }
-
-  .persona-img .imagen-placeholder {
-    width: 100%;
-    height: 300px;
-  }
-
-  .valores-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-content h1 {
-    font-size: 32px;
-  }
-
-}
-.quienes-somos p {
-  margin-bottom: 20px;
-  line-height: 1.7;
-  color: #444;
-}
-
-.quienes-somos .destacado {
-  margin-top: 30px;
-  font-weight: 500;
-  color: #2f3b8f;
-}
 /* ===================== */
 /* IDENTIDAD (NUEVO) */
 /* ===================== */
@@ -2959,13 +2922,91 @@ blockquote {
   line-height: 1.5;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE DE LA SECCION - SOBRE NOSOTRAS  */
 
-@media (max-width: 992px) {
-  .identidad-grid {
-    grid-template-columns: 1fr;
+
+/* - RESPONSIVE-HERO   */
+@media (max-width: 768px) {
+
+  .sobre-hero {
+    min-height: auto;
+    padding: 100px 20px;
+    align-items: center;
+    text-align: center;
   }
+
+  .hero-content {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
 }
+/* RESPONSIVE- CONTENIDO ( QUIENES SOMOS )    */
+@media (max-width: 768px) {
+
+  .quienes-somos {
+    text-align: center;
+  }
+
+  .quienes-somos h2 {
+    margin: 0 auto 20px auto;
+  }
+
+  .quienes-img img {
+    max-width: 100%;
+    margin-bottom: 80px;
+  }
+
+}
+
+/* RESPONSIVE- CONTENIDO ( EQUIPO)    */
+
+@media (max-width: 768px) {
+
+  .equipo {
+    gap: 80px;
+  }
+
+  .persona {
+    gap: 30px;
+    text-align: center;
+  }
+
+  .persona-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .persona-info h3 {
+    font-size: 24px;
+  }
+
+}
+/* RESPONISVE- CONTENIDO ( IDENTIDAD)    */
+@media (max-width: 768px) {
+
+  .identidad-header h2 {
+    font-size: 28px;
+  }
+
+  .identidad-card {
+    padding: 30px;
+  }
+
+}
+
+
+
+
+
 
 
 

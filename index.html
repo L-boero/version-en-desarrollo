@@ -177,7 +177,7 @@ transformando su forma de pensar, sentir y actuar.
         “La transformación comienza cuando alguien se anima a mirar diferente.”
       </blockquote>
 
-      <a href="./pages/sobrenosotras.html" class="btn-secondary">
+      <a href="./pages/sobrenosotras.html" class="btn-secondary btn-primary">
         Conocé nuestra historia
       </a>
 
@@ -218,9 +218,8 @@ Conversemos y diseñemos un proceso a tu medida, alineado a tus objetivos.
       navMenu.classList.toggle('active');
     });
   }
-</script>
 
-<script>
+  // 🔥 cerrar menú al hacer click en links
   const links = document.querySelectorAll('.nav-links a');
 
   links.forEach(link => {
@@ -229,12 +228,26 @@ Conversemos y diseñemos un proceso a tu medida, alineado a tus objetivos.
     });
   });
 
+  // 🔥 dropdown en mobile
   const dropdown = document.querySelector('.dropdown > a');
 
-  dropdown.addEventListener('click', (e) => {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      dropdown.parentElement.classList.toggle('open');
+  if (dropdown) {
+    dropdown.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        dropdown.parentElement.classList.toggle('open');
+      }
+    });
+  }
+
+  // 🔥 cerrar menú al hacer click fuera
+  document.addEventListener('click', (e) => {
+    if (
+      navMenu.classList.contains('active') &&
+      !navMenu.contains(e.target) &&
+      !toggle.contains(e.target)
+    ) {
+      navMenu.classList.remove('active');
     }
   });
 </script>
