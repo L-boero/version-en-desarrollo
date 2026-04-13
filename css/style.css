@@ -1688,6 +1688,34 @@ ul li::before {
 
 }
 
+/* ============================= */
+/* FIX MOBILE FINAL - EQUIPOS */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* 🔥 FORZAR TIMELINE EN COLUMNA */
+  .equipos-proceso .timeline {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px;
+  }
+
+  .equipos-proceso .step {
+    width: 100% !important;
+  }
+
+  /* 🔥 MODALIDADES (evitar scroll lateral) */
+  .equipos-modalidades .grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .equipos-modalidades .card {
+    width: 100%;
+  }
+
+}
+
 /* SUB SECCIONES DEL SITIO-  SECTION FORMACIONES  3/3*/
 
 
