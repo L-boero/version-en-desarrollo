@@ -9,7 +9,6 @@
 </head>
 <body>
     
-
 <!-- MENU NAV -->
 
 <header class="navbar">
@@ -20,12 +19,18 @@
       <a href="../index.html">Boero González</a>
     </div>
 
+    <!-- Botón hamburguesa -->
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <!-- Navegación principal -->
     <nav class="nav-menu">
       <ul class="nav-links">
 
         <li><a href="../index.html">Home</a></li>
-
         <li><a href="./sobrenosotras.html">Sobre Nosotras</a></li>
 
         <li class="dropdown">
@@ -39,7 +44,8 @@
 
         <li><a href="./metodo.html">Método</a></li>
 
-        <li><a href="./contacto.html" class="btn-nav" class="active">Contacto</a></li>
+        <!-- ✅ FIX CLASS -->
+        <li><a href="./contacto.html" class="btn-nav active">Contacto</a></li>
 
       </ul>
     </nav>
@@ -69,12 +75,14 @@
       <!-- Columna información -->
       <div class="contacto-info">
 
-        <div class="info-item">
+        <!-- ✅ WHATSAPP DESTACADO (fix << eliminado) -->
+        <div class="info-item destacado">
           <h3>WhatsApp</h3>
-          <p>Comunicación directa y personalizada.</p>
-          <a href="https://wa.me/549XXXXXXXXXX" class="btn-whatsapp">
-            Iniciar conversación
-          </a>
+          <p>La forma más rápida de comenzar. Respondemos en el día.</p>
+          <a href="https://wa.me/543424661203" target="_blank" class="hero-cta btn-primary">
+         Iniciar una conversación
+         </a>
+          
         </div>
 
         <div class="info-item">
@@ -112,9 +120,13 @@
             <textarea rows="5" placeholder="Escribe tu consulta aquí..." required></textarea>
           </div>
 
+          <!-- ✅ BOTÓN SOLO -->
           <button type="submit" class="btn-primary">
             Enviar mensaje
           </button>
+
+          <!-- ✅ TEXTO FUERA DEL BOTÓN -->
+          <p class="form-note">Respondemos dentro de las 24 hs.</p>
 
         </form>
 
@@ -125,6 +137,40 @@
   </div>
 
 </section>
+
+  <!-- TODO tu contenido -->
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  if (toggle && navMenu) {
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  }
+
+  // 🔥 cerrar menú al hacer click en links
+  const links = document.querySelectorAll('.nav-links a');
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
+
+  // 🔥 dropdown mobile
+  const dropdown = document.querySelector('.dropdown > a');
+
+  if (dropdown) {
+    dropdown.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        dropdown.parentElement.classList.toggle('open');
+      }
+    });
+  }
+
+</script>
 
 
 
