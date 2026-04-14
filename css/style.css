@@ -3683,11 +3683,7 @@ blockquote {
 /* SECCION METODO*3/4/
 
 
-.metodo {
-  padding: 120px 0;
-  background-color: #f9f9f9;
-}
-.
+
 
 /* HEADER */
 .metodo-header {
@@ -3727,27 +3723,38 @@ blockquote {
   gap: 40px;
   margin-bottom: 120px;
 }
-
 .etapa {
   background: #ffffff;
   padding: 40px;
   border-radius: 16px;
   text-align: left;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.35s ease; /* 🔥 clave */
 }
 
-.numero {
-  font-size: 32px;
-  font-weight: bold;
-  color: #2f3b8f;
-  display: block;
-  margin-bottom: 20px;
+.etapa:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
+.numero {
+  transition: transform 0.3s ease;
+}
+
+.etapa:hover .numero {
+  transform: scale(1.1);
+}
+
 
 .etapa h3 {
   margin-bottom: 15px;
   font-size: 18px;
+  transition: color 0.3s ease;
 }
+
+.etapa:hover h3 {
+  color: #2f3b8f;
+}
+
 
 .etapa p {
   font-size: 15px;
@@ -3771,38 +3778,75 @@ blockquote {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
-
 .diferencial-item {
   background: #ffffff;
   padding: 30px;
   border-radius: 12px;
   border: 1px solid #e6e6e6;
+  transition: all 0.35s ease;
+}
+
+.diferencial-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+  border-color: #ddd;
 }
 
 .diferencial-item h4 {
-  margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
+
+.diferencial-item:hover h4 {
+  color: #2f3b8f;
+}
+
+
+
 
 /* CTA */
 .metodo-cta {
   text-align: center;
+  margin-bottom: 30px;
 }
+/* RESPONSIVE MOBILE SECCION METODO */
 
+@media (max-width: 768px) {
 
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-
-  .metodo-etapas {
-    grid-template-columns: 1fr;
-  }
-
-  .diferencial-grid {
-    grid-template-columns: 1fr;
+  .metodo {
+    padding: 80px 20px;
   }
 
   .metodo-header h1 {
     font-size: 28px;
+  }
+
+  .metodo-intro {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .metodo-descripcion {
+    font-size: 15px;
+    margin-bottom: 60px;
+  }
+
+  .metodo-etapas {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .etapa {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .diferencial-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .metodo-diferencial h2 {
+    font-size: 24px;
   }
 
 }
