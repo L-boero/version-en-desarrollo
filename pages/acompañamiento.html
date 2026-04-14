@@ -18,6 +18,14 @@
       <a href="../index.html">Boero González</a>
     </div>
 
+
+    <!-- Botón hamburguesa -->
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <!-- Navegación principal -->
     <nav class="nav-menu">
       <ul class="nav-links">
@@ -185,11 +193,50 @@
   <div class="container">
     <h2>¿Listo para comenzar tu proceso?</h2>
     <p>Conversemos y diseñemos el acompañamiento adecuado para vos o tu equipo.</p>
-    <a href="https://wa.me/543424661203" target="_blank" class="hero-cta">
+    <a href="https://wa.me/543424661203" target="_blank" class="hero-cta btn-primary">
   Agendar conversación
 </a>
   </div>
 </section>
+
+
+
+
+  <!-- TODO tu contenido -->
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  if (toggle && navMenu) {
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  }
+
+  // 🔥 cerrar menú al hacer click en links
+  const links = document.querySelectorAll('.nav-links a');
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
+
+  // 🔥 dropdown mobile
+  const dropdown = document.querySelector('.dropdown > a');
+
+  if (dropdown) {
+    dropdown.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        dropdown.parentElement.classList.toggle('open');
+      }
+    });
+  }
+
+</script>
+
+
 
 
 </body>
