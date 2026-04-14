@@ -1827,6 +1827,53 @@ ul li::before {
   left: 0;
   color: #2f3b8f;
 }
+/* RESPONSIVE- FORMACIONES-  */
+
+/* ============================= */
+/* MOBILE - FORMACIONES (HERO + BLOQUE BENEFICOS ) */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* HERO */
+  .formaciones-hero {
+    padding: 100px 20px;
+    background-position: center;
+  }
+
+  .formaciones-hero h1 {
+    font-size: 30px;
+  }
+
+  .formaciones-hero p {
+    font-size: 16px;
+  }
+
+  /* BLOQUE CONCEPTUAL */
+  .coaching-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .coaching-box {
+    width: 100%;
+    text-align: center;
+  }
+
+  .coaching-box p,
+  .coaching-box ul {
+    text-align: center;
+  }
+
+  /* LISTAS centradas */
+  .ideal-list {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+}
+
+
 
 /* ============================= */
 /* GRID */
@@ -1956,6 +2003,77 @@ ul li::before {
   border-radius: 8px;
   margin-bottom: 15px;
 }
+/* RESPONISVE MOBILE BLOQUE RESUMEN ECOA */
+
+/* ============================= */
+/* MOBILE - BLOQUES FORMATIVOS */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* GRID → 1 columna */
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* SECCIÓN */
+  .bloque-formativo {
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  /* ECOA destacado más compacto */
+  .bloque-formativo:first-of-type {
+    padding: 100px 20px;
+  }
+
+  /* IMAGEN */
+  .bloque-img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .bloque-img img {
+    max-height: 260px;
+  }
+
+  /* TEXTO */
+  .bloque-formativo .contenido {
+    text-align: center;
+  }
+
+  .bloque-formativo .contenido h2 {
+    font-size: 26px;
+  }
+
+  .bloque-formativo .contenido p {
+    font-size: 15px;
+  }
+
+  /* LISTAS */
+  .bloque-formativo .contenido ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  /* BOTONES */
+  .bloque-formativo .btn-primary,
+  .bloque-formativo .btn-secondary,
+  .bloque-formativo .btn-outline {
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  /* TAG ECOA centrado */
+  .tag-ecoa {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+
 /* ============================= */
 /*SECCION RECURSOS DE CONTENIDO DENTRO DE SECCION FORMACIONES
 /* ============================= */
@@ -2003,7 +2121,60 @@ ul li::before {
   display: block;
 }
 
+/* ============================= */
+/* MOBILE - RECURSOS (VIDEOS) */
+/* ============================= */
 
+@media (max-width: 768px) {
+
+  /* GRID → 1 columna */
+  .videos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 30px auto;
+  }
+
+  /* CARD */
+  .video-card {
+    height: auto;
+    border-radius: 16px;
+  }
+
+  /* 🔥 PROPORCIÓN RESPONSIVE REAL */
+  .video-card iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    box-shadow:  0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  /* OCULTAMOS ICONO FAKE (queda raro con iframe real) */
+  .video-card::after {
+    display: none;
+  }
+
+  /* SECCIÓN */
+  .recursos {
+    text-align: center;
+  }
+
+  .recursos h2 {
+    font-size: 26px;
+  }
+
+  .recursos p {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  /* BOTÓN */
+  .recursos .btn-primary {
+    margin-top: 20px;
+    display: inline-block;
+  }
+
+}
 
 
 
@@ -2337,6 +2508,7 @@ ul li::before {
 
 
 
+
 //* ============================= */
 /* NUEVO BLOQUE ECOA  DECLARADO POR MARIANA */
 /* ============================= */
@@ -2390,19 +2562,106 @@ ul li::before {
   font-size: 14px;
   color: #666;
 }
+
+
+
+/* ============================= */
+/* MOBILE - BLOQUE ECOA COMPLETO */
+/* ============================= */
+
 @media (max-width: 768px) {
-  .ecoa-datos {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
-@media (max-width: 480px) {
-  .ecoa-datos {
+  /* SECCIÓN */
+  .ecoa {
+    padding: 80px 20px;
+  }
+
+  /* CONTAINER (🔥 el mayor problema) */
+  .ecoa .container {
+    padding: 40px 20px;
+  }
+
+  /* HEADER */
+  .ecoa-header h2 {
+    font-size: 28px;
+  }
+
+  .ecoa-subtitulo {
+    font-size: 15px;
+  }
+
+  /* GRID PRINCIPAL */
+  .ecoa-grid {
     grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
   }
+
+  /* IMAGEN */
+  .ecoa-imagen {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* SUB GRID */
+  .ecoa-estructura {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .ecoa-item {
+    text-align: center;
+  }
+
+  /* RESPALDO */
+  .ecoa-respaldo {
+    margin: 60px auto;
+    padding: 0 10px;
+  }
+
+  .ecoa-respaldo h3 {
+    font-size: 22px;
+  }
+
+  /* 🔥 FIX REAL ECOA DATOS */
+  .ecoa-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .ecoa-datos div {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  /* VALOR */
+  .ecoa-valor {
+    padding: 30px 20px;
+    margin-top: 60px;
+  }
+
+  .ecoa-valor h3 {
+    font-size: 22px;
+  }
+
+  /* TESTIMONIOS */
+  .testimonios-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonio-card {
+    text-align: center;
+  }
+
+  /* CTA */
+  .ecoa-cta {
+    margin-top: 20px;
+  }
+
 }
-
-
 
 
 
@@ -2530,6 +2789,83 @@ ul li::before {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================= */
+/* MOBILE - PROGRAMA COMPLETO- CAPACITACIONES  */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* SECCIÓN */
+  .programa-detalle {
+    padding: 80px 20px;
+  }
+
+  /* HEADER */
+  .programa-header h2 {
+    font-size: 28px;
+  }
+
+  .programa-subtitulo {
+    font-size: 15px;
+  }
+
+  /* GRID PRINCIPAL */
+  .programa-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  /* IMAGEN */
+  .programa-imagen {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* CONTENIDO */
+  .programa-contenido {
+    text-align: center;
+  }
+
+  .programa-descripcion {
+    font-size: 15px;
+  }
+
+  /* INFO */
+  .programa-info {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .info-item {
+    text-align: center;
+  }
+
+  /* TEMÁTICAS */
+  .tematicas-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .tema {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  /* EXPERIENCIA */
+  .experiencia-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .experiencia-item {
+    height: 180px;
+  }
+
+}
+
+
 
 /* ============================= */
 /* PROGRAMAS FORMATIVOS */
@@ -2730,24 +3066,103 @@ ul li::before {
   color: #666;
 }
 
+
 /* ============================= */
-/* RESPONSIVE */
+/* MOBILE - PROGRAMAS FORMATIVOS */
 /* ============================= */
 
 @media (max-width: 768px) {
+
+  /* SECCIÓN */
+  .programas-formativos {
+    padding: 80px 20px;
+  }
+
+  /* HEADER */
+  .programas-header h2 {
+    font-size: 28px;
+  }
+
+  .programas-intro {
+    font-size: 15px;
+  }
+
+  /* BLOQUES */
   .programa-bloque {
     flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 60px;
   }
 
   .programa-bloque.reverse {
     flex-direction: column;
   }
 
+  /* IMAGEN */
+  .programa-imagen {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* CONTENIDO */
+  .programa-contenido {
+    text-align: center;
+  }
+
+  .programa-contenido h3 {
+    font-size: 24px;
+  }
+
+  .programa-contenido p {
+    font-size: 15px;
+  }
+
+  /* LISTAS */
+  .programa-contenido ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  /* 🔥 SUB BLOQUE (CLAVE) */
+  .programa-subbloque {
+    margin: 20px auto 60px auto; /* sacamos el negativo */
+    padding: 25px 20px;
+  }
+
+  .programa-subbloque h4 {
+    font-size: 18px;
+  }
+
+  .programa-subbloque p {
+    font-size: 14px;
+  }
+
+  /* TESTIMONIOS */
   .testimonios-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
-}
 
+  .testimonio-card {
+    padding: 25px;
+    text-align: center;
+  }
+
+  /* CTA FINAL */
+  .cta-final {
+    padding: 80px 20px;
+  }
+
+  .cta-final h2 {
+    font-size: 26px;
+  }
+
+  .cta-final p {
+    font-size: 15px;
+  }
+
+}
 
 /* SECCIONES PRINCIPALES DEL SITIO- SOBRE NOSOTRAS- 2/4*/
 
