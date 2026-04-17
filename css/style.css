@@ -589,7 +589,7 @@ section {
 @media (max-width: 768px) {
 
   section {
-    padding: 70px 0;
+    padding: 90px 0;
   }
 
   .container {
@@ -598,30 +598,27 @@ section {
 
 }
 /* RESPONSIVE HOME-HERO  MOBILE  */
-
 @media (max-width: 768px) {
-
   .hero {
-    padding: 100px 20px 80px;
+    padding: 140px 20px 100px;
     text-align: center;
   }
 
   .hero h1 {
-    font-size: 32px;
-    line-height: 1.2;
+    font-size: 28px;
+    line-height: 1.3;
   }
 
   .hero p {
-    font-size: 16px;
-    margin-bottom: 25px;
+    font-size: 15px;
+    margin-bottom: 30px;
   }
 
   .hero-cta {
     width: 100%;
-    text-align: center;
   }
-
 }
+
 /* RESPONSIVE HOME-NAVBAR  MOBILE  */
 @media (max-width: 768px) {
 
@@ -667,16 +664,26 @@ section {
 
 /* RESPONSIVE HOME-CARDS  MOBILE  */
 @media (max-width: 768px) {
-
   .cards-3 {
-    gap: 20px;
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .cards-3::-webkit-scrollbar {
+    display: none;
   }
 
   .card {
-    padding: 30px 20px;
+    min-width: 85%;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    padding: 25px 20px;
   }
-
 }
+
 /* RESPONSIVE HOME-IMAGENES MOBILE  */
 
 @media (max-width: 768px) {
@@ -711,6 +718,17 @@ section {
 
 }
 
+@media (max-width: 768px) {
+  .home-sobre-contenido p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .home-sobre-contenido h2 {
+    font-size: 26px;
+  }
+}
+
 
 /* RESPONSIVE HOME-CTA FINAL MOBILE  */
 @media (max-width: 768px) {
@@ -736,6 +754,7 @@ section {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 10px;
+    padding-left: 10px;
   }
 
   .a-quien-grid::-webkit-scrollbar {
@@ -743,9 +762,10 @@ section {
   }
 
   .a-quien-item {
-    min-width: 85%;
+    min-width: 80%;
     flex: 0 0 auto;
     scroll-snap-align: center;
+    border-radius: 16px;
   }
 
 }
@@ -2042,7 +2062,7 @@ ul li::before {
 
 .imagen-placeholder {
   width: 100%;
-  height: 100%;
+  height: 380px;
   background-color: #ddd;
   border-radius: 20px;
 }
