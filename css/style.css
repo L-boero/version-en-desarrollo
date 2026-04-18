@@ -749,25 +749,25 @@ section {
 
 /* RESPONSIVE HOME-CARDS  MOBILE  */
 @media (max-width: 768px) {
+
   .cards-3 {
     display: flex;
-    overflow-x: auto;
-    gap: 16px;
-    padding-bottom: 10px;
-    scroll-snap-type: x mandatory;
-    min-width: 80%;
-  }
-
-  .cards-3::-webkit-scrollbar {
-    display: none;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .card {
-    min-width: 85%;
-    flex: 0 0 auto;
-    scroll-snap-align: center;
+    width: 100%;
     padding: 25px 20px;
   }
+
+}
+.card h3 {
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
 }
 
 /* RESPONSIVE HOME-IMAGENES MOBILE  */
