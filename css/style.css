@@ -1183,6 +1183,9 @@ html {
 
   .hub-card {
     padding: 30px 25px;
+    border-radius: 16px;
+    margin-bottom: 10px;
+    transition: all0.3 ease;
   }
 
 }
@@ -1215,8 +1218,31 @@ html {
   }
 
   .paso {
-    padding: 25px;
-  }
+  padding: 25px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.paso:last-child {
+  border-bottom: none;
+}
+.paso span {
+  color: #2f3b8f;
+  font-weight: 600;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.paso h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.paso p {
+  font-size: 15px;
+  line-height: 1.6;
+}
 
 }
 
