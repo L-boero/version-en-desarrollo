@@ -2263,12 +2263,18 @@ ul li::before {
   .bloque-img {
     max-width: 100%;
     margin: 0 auto;
+    margin-bottom: 25px;
   }
-
-  .bloque-img img {
-    max-height: 260px;
-  }
-
+.bloque-img img,
+.programa-imagen img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  display: block;
+  margin-bottom: 25px;
+}
   /* TEXTO */
   .bloque-formativo .contenido {
     text-align: center;
