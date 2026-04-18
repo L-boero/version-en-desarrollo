@@ -757,7 +757,7 @@ section {
   .cards-3 {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 30px;
     
   }
 
@@ -4278,6 +4278,19 @@ blockquote {
   .btn-whatsapp {
     width: 100%;
     text-align: center;
+  }
+
+}
+
+/* CTA EN MOBILE GENERAL PARA TODAS LAS SECCIONES */
+
+@media (max-width: 768px) {
+
+  .btn-secondary {
+    background: var(--gradiente-marca);
+    color: #fff;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   }
 
 }
