@@ -3849,6 +3849,9 @@ blockquote {
 
   .quienes-somos h2 {
     margin: 0 auto 20px auto;
+    font-size: 26px;
+    line-height: 1.3;
+    text-align: center;
   }
 
   .quienes-img img {
@@ -3858,6 +3861,8 @@ blockquote {
   .quienes-somos p {
     font-size: 16px;
     line-height: 1.6;
+    margin-bottom: 16px;
+    text-align: left;
   }
 
 }
@@ -3872,8 +3877,8 @@ blockquote {
   }
   .persona {
     flex-direction: column;
-    gap: 100px;
-   align-items: flex-start;
+    gap: 25px;
+   align-items: center;
   }
 
   .persona.reverse {
@@ -3883,13 +3888,14 @@ blockquote {
   .persona-img img {
     width: 100%;
     height: auto;
-    max-width: 300px;
+    max-width: 250px;
     margin: 0 auto;
   }
 
   .persona-info {
     width: 100%;
     max-width: 480;
+    text-align: center;
   }
 
   .persona-info h3 {
@@ -3919,6 +3925,7 @@ blockquote {
 
   .identidad-header h2 {
     font-size: 28px;
+
   }
 
 }
