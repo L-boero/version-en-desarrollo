@@ -234,7 +234,7 @@ Conversemos y diseñemos un proceso a tu medida, alineado a tus objetivos.
     });
   }
 
-  // 🔥 cerrar menú al hacer click en links
+  // cerrar menú al hacer click en links
   const links = document.querySelectorAll('.nav-links a');
 
   links.forEach(link => {
@@ -243,20 +243,34 @@ Conversemos y diseñemos un proceso a tu medida, alineado a tus objetivos.
     });
   });
 
-  // 🔥 dropdown mobile
-  const dropdown = document.querySelector('.dropdown > a');
+  // 🔥 dropdown mobile (versión correcta)
+  document.querySelectorAll('.dropdown > a').forEach(link => {
 
-  if (dropdown) {
-    dropdown.addEventListener('click', (e) => {
+    link.addEventListener('click', (e) => {
+
       if (window.innerWidth <= 768) {
-        e.preventDefault();
-        dropdown.parentElement.classList.toggle('open');
+
+        const parent = link.parentElement;
+
+        if (!parent.classList.contains('open')) {
+
+          e.preventDefault();
+
+          // 🔥 cerrar otros dropdowns
+          document.querySelectorAll('.dropdown').forEach(d => {
+            d.classList.remove('open');
+          });
+
+          parent.classList.add('open');
+        }
+
       }
+
     });
-  }
+
+  });
 
 </script>
-
   
 </body>
 </html>
