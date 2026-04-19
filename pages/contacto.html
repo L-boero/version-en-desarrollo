@@ -11,7 +11,6 @@
     
 <!-- MENU NAV -->
 
-<!-- MENU NAV -->
 <header class="navbar">
   <div class="container nav-container">
 
@@ -27,7 +26,7 @@
       <span></span>
     </div>
 
-    <!-- Navegación principal -->
+    <!-- Navegación -->
     <nav class="nav-menu">
       <ul class="nav-links">
 
@@ -35,19 +34,20 @@
 
         <li><a href="../sobrenosotras.html">Sobre Nosotras</a></li>
 
-        <!-- DROPDOWN -->
+        <!-- 🔥 DROPDOWN MEJORADO -->
         <li class="dropdown">
-          <a href="#">Acompañamiento</a>
+
+          <div class="dropdown-trigger">
+            <a href="../acompañamiento.html">Acompañamiento</a>
+            <span class="dropdown-icon">▾</span>
+          </div>
+
           <ul class="dropdown-menu">
-
-            <!-- 🔥 nuevo sub-item -->
-            <li><a href="../acompañamiento.html">Ver acompañamiento</a></li>
-
             <li><a href="./coachingindi.html">Coaching Individual</a></li>
             <li><a href="./trabajoequip.html">Trabajo con Equipos</a></li>
             <li><a href="./formaciones.html">Formaciones</a></li>
-
           </ul>
+
         </li>
 
         <li><a href="../metodo.html">Método</a></li>
@@ -121,43 +121,42 @@
   const navMenu = document.querySelector('.nav-menu');
 
   // 🔹 Toggle menú hamburguesa
-  toggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-
-  // 🔹 Dropdown mobile (comportamiento correcto)
-  document.querySelectorAll('.dropdown > a').forEach(link => {
-
-    link.addEventListener('click', (e) => {
-
-      if (window.innerWidth <= 768) {
-
-        e.preventDefault(); // 🔥 evita navegación
-
-        const parent = link.parentElement;
-
-        // toggle abrir/cerrar
-        parent.classList.toggle('open');
-
-        // cerrar otros dropdowns
-        document.querySelectorAll('.dropdown').forEach(d => {
-          if (d !== parent) d.classList.remove('open');
-        });
-
-      }
-
+  if (toggle && navMenu) {
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
     });
+  }
 
-  });
+  // 🔹 Dropdown SOLO con ícono (mobile)
+  document.querySelectorAll('.dropdown').forEach(drop => {
 
-  // 🔹 Cerrar menú al hacer click en links reales
-  document.querySelectorAll('.dropdown-menu a, .nav-links > li:not(.dropdown) a')
-    .forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
+    const icon = drop.querySelector('.dropdown-icon');
+
+    if (icon) {
+      icon.addEventListener('click', (e) => {
+
+        if (window.innerWidth <= 768) {
+          e.stopPropagation();
+
+          drop.classList.toggle('open');
+
+          // cerrar otros dropdowns
+          document.querySelectorAll('.dropdown').forEach(d => {
+            if (d !== drop) d.classList.remove('open');
+          });
+        }
+
       });
-    });
+    }
 
+  });
+
+  // 🔹 Cerrar menú al navegar
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
 </script>
 
 
