@@ -11,14 +11,14 @@
   
   
   
-    <!-- MENU NAV -->
-
+  
+<!-- MENU NAV -->
 <header class="navbar">
   <div class="container nav-container">
 
     <!-- Logo -->
     <div class="logo">
-      <a href="../../index.html">Boero Gonzzáles</a>
+      <a href="../../index.html">Boero González</a>
     </div>
 
     <!-- Botón hamburguesa -->
@@ -36,12 +36,18 @@
 
         <li><a href="../sobrenosotras.html">Sobre Nosotras</a></li>
 
+        <!-- DROPDOWN -->
         <li class="dropdown">
-          <a href="../acompañamiento.html" class="active">Acompañamiento</a>
+          <a href="#">Acompañamiento</a>
           <ul class="dropdown-menu">
+
+            <!-- 🔥 nuevo sub-item -->
+            <li><a href="../acompañamiento.html">Ver acompañamiento</a></li>
+
             <li><a href="./coachingindi.html">Coaching Individual</a></li>
             <li><a href="./trabajoequip.html">Trabajo con Equipos</a></li>
-            <li><a href="./formaciones.html" class="active">Formaciones</a></li>
+            <li><a href="./formaciones.html">Formaciones</a></li>
+
           </ul>
         </li>
 
@@ -53,13 +59,7 @@
     </nav>
 
   </div>
-
-
-
-  
 </header>
-
-
 
 
 
@@ -620,48 +620,33 @@ Conversemos y diseñemos un proceso a tu medida, alineado a tus objetivos.
 
 
 
-
-
-  <!-- TODO tu contenido -->
 <script>
   const toggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
 
-  if (toggle && navMenu) {
-    toggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-  }
-
-  // cerrar menú al hacer click en links
-  const links = document.querySelectorAll('.nav-links a');
-
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-    });
+  // 🔹 Toggle menú hamburguesa
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
   });
 
-  // 🔥 dropdown mobile (versión correcta)
+  // 🔹 Dropdown mobile (comportamiento correcto)
   document.querySelectorAll('.dropdown > a').forEach(link => {
 
     link.addEventListener('click', (e) => {
 
       if (window.innerWidth <= 768) {
 
+        e.preventDefault(); // 🔥 evita navegación
+
         const parent = link.parentElement;
 
-        if (!parent.classList.contains('open')) {
+        // toggle abrir/cerrar
+        parent.classList.toggle('open');
 
-          e.preventDefault();
-
-          // 🔥 cerrar otros dropdowns
-          document.querySelectorAll('.dropdown').forEach(d => {
-            d.classList.remove('open');
-          });
-
-          parent.classList.add('open');
-        }
+        // cerrar otros dropdowns
+        document.querySelectorAll('.dropdown').forEach(d => {
+          if (d !== parent) d.classList.remove('open');
+        });
 
       }
 
@@ -669,8 +654,15 @@ Conversemos y diseñemos un proceso a tu medida, alineado a tus objetivos.
 
   });
 
-</script>
+  // 🔹 Cerrar menú al hacer click en links reales
+  document.querySelectorAll('.dropdown-menu a, .nav-links > li:not(.dropdown) a')
+    .forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
 
+</script>
 
 </body>
 </html>
