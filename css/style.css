@@ -4153,172 +4153,99 @@ blockquote {
 
 
 /* SECCION CONTACTO 4/4*/
-
 .contacto {
-  padding: 120px 0;
-  background: #f4f6f9;
-}
-
-.contacto-header {
+  padding: 100px 20px;
   text-align: center;
-  margin-bottom: 80px;
 }
 
-.contacto-header h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.contacto-header p {
-  max-width: 700px;
-  margin: 0 auto;
+.contacto-intro {
+  max-width: 500px;
+  margin: 0 auto 40px;
   color: #555;
-  line-height: 1.6;
 }
 
-/* GRID */
-.contacto-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+/* WHATSAPP */
+.contacto-whatsapp {
+  background: linear-gradient(135deg, #f5f7ff, #eef1ff);
+  padding: 40px 30px;
+  border-radius: 18px;
+  margin: 40px auto;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* INFORMACION */
-.contacto-info {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-/* ITEMS */
-.info-item {
-  transition: all 0.3s ease;
-}
-
-.info-item:hover {
-  transform: translateY(-3px);
-}
-
-/* DESTACADO (WhatsApp) */
-.info-item.destacado {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid #eaeaea;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
-/* TITULOS */
-.info-item h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-/* LINKS */
-.link-social {
-  color: #2f3b8f;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.link-social:hover {
-  text-decoration: underline;
-}
-
-/* BOTON WHATSAPP */
 .btn-whatsapp {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 24px;
-  background: #25D366;
+  background: #2f3b8f;
   color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
+  padding: 16px 34px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 10px 25px rgba(47,59,143,0.25);
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .btn-whatsapp:hover {
-  background: #1ebe5d;
   transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(47,59,143,0.35);
 }
 
-/* FORMULARIO */
-.contacto-form {
-  background: #ffffff;
-  padding: 50px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-
-.contacto-form:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
-
-/* INPUTS */
-.form-group {
-  margin-bottom: 25px;
+/* INFO */
+.contacto-info {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
-
-.form-group label {
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #555;
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #2f3b8f;
-  box-shadow: 0 0 0 2px rgba(47,59,143,0.1);
-}
-
-/* TEXTO DE RESPUESTA */
-.form-note {
-  font-size: 13px;
-  color: #777;
-  margin-top: 10px;
+.contacto-item{
   text-align: center;
 }
+.contacto-item a {
+  text-decoration: none;
+  color: #2f3b8f;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 5px;
+}
 
+.contacto-item h4 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contacto-item p {
+  color: #555;
+  font-size: 15px;
+  color: #333;
+}
 /* RESPONSIVE SECTION CONTACTO MOBILE */
 @media (max-width: 768px) {
 
-  .contacto-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .contacto {
+    padding: 80px 20px;
   }
 
-  .contacto-header h1 {
-    font-size: 28px;
+  .contacto-whatsapp {
+    padding: 25px 20px;
   }
+}
 
-  .contacto-header p {
-    font-size: 15px;
-    padding: 0 10px;
+.contacto-note {
+  font-size: 13px;
+  color: #777;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .contacto-info {
+    flex-direction: column;
+    gap: 20px;
   }
-
-  .contacto-form {
-    padding: 30px 20px;
-  }
-
-  .btn-whatsapp {
-    width: 100%;
-    text-align: center;
-  }
-
 }
 
 /* CTA EN MOBILE GENERAL PARA TODAS LAS SECCIONES */
@@ -4331,3 +4258,4 @@ blockquote {
   }
 
 }
+
