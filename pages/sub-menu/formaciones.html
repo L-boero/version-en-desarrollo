@@ -13,6 +13,8 @@
   
   
 <!-- MENU NAV -->
+ <!-- MENU NAV -->
+
 <header class="navbar">
   <div class="container nav-container">
 
@@ -28,7 +30,7 @@
       <span></span>
     </div>
 
-    <!-- Navegación -->
+    <!-- Navegación principal -->
     <nav class="nav-menu">
       <ul class="nav-links">
 
@@ -36,20 +38,13 @@
 
         <li><a href="../sobrenosotras.html">Sobre Nosotras</a></li>
 
-        <!-- 🔥 DROPDOWN MEJORADO -->
         <li class="dropdown">
-
-          <div class="dropdown-trigger">
-            <a href="../acompañamiento.html">Acompañamiento</a>
-            <span class="dropdown-icon">▾</span>
-          </div>
-
+          <a href="../acompañamiento.html" class="active">Acompañamiento</a>
           <ul class="dropdown-menu">
             <li><a href="./coachingindi.html">Coaching Individual</a></li>
             <li><a href="./trabajoequip.html">Trabajo con Equipos</a></li>
-            <li><a href="./formaciones.html">Formaciones</a></li>
+            <li><a href="./formaciones.html" class="active">Formaciones</a></li>
           </ul>
-
         </li>
 
         <li><a href="../metodo.html">Método</a></li>
@@ -60,6 +55,8 @@
     </nav>
 
   </div>
+
+  
 </header>
 
 <!-- HERO -->
@@ -616,48 +613,52 @@ Conversemos y diseñemos un proceso a tu medida, alineado a tus objetivos.
   </div>
 </section>
 
-
 <script>
   const toggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
 
-  // 🔹 Toggle menú hamburguesa
   if (toggle && navMenu) {
     toggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
   }
 
-  // 🔹 Dropdown SOLO con ícono (mobile)
-  document.querySelectorAll('.dropdown').forEach(drop => {
+  // cerrar menú al hacer click en links
+  const links = document.querySelectorAll('.nav-links a');
 
-    const icon = drop.querySelector('.dropdown-icon');
-
-    if (icon) {
-      icon.addEventListener('click', (e) => {
-
-        if (window.innerWidth <= 768) {
-          e.stopPropagation();
-
-          drop.classList.toggle('open');
-
-          // cerrar otros dropdowns
-          document.querySelectorAll('.dropdown').forEach(d => {
-            if (d !== drop) d.classList.remove('open');
-          });
-        }
-
-      });
-    }
-
-  });
-
-  // 🔹 Cerrar menú al navegar
-  document.querySelectorAll('.nav-links a').forEach(link => {
+  links.forEach(link => {
     link.addEventListener('click', () => {
       navMenu.classList.remove('active');
     });
   });
+
+  // 🔥 dropdown mobile (versión correcta)
+  document.querySelectorAll('.dropdown > a').forEach(link => {
+
+    link.addEventListener('click', (e) => {
+
+      if (window.innerWidth <= 768) {
+
+        const parent = link.parentElement;
+
+        if (!parent.classList.contains('open')) {
+
+          e.preventDefault();
+
+          // 🔥 cerrar otros dropdowns
+          document.querySelectorAll('.dropdown').forEach(d => {
+            d.classList.remove('open');
+          });
+
+          parent.classList.add('open');
+        }
+
+      }
+
+    });
+
+  });
+
 </script>
 
 </body>

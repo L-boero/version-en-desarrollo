@@ -145,12 +145,9 @@ section {
 }
 
 
-
-
-/* MENU NAVEGACION*/
-
-
+/* ============================= */
 /* NAVBAR */
+/* ============================= */
 
 .navbar {
   width: 100%;
@@ -179,7 +176,11 @@ section {
   color: #222;
   text-decoration: none;
 }
-/* MENU HAMBURHUESA- MOBILE */
+
+/* ============================= */
+/* MENU HAMBURGUESA */
+/* ============================= */
+
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -194,81 +195,9 @@ section {
   border-radius: 2px;
 }
 
-/* RESPONSIBE MENUMENU- MOBILE */
-@media (max-width: 768px) {
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  /* Ocultar menú por defecto */
-  .nav-menu {
-  position: fixed;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 70px);
-
-  background: white;
-
-  display: none;
-  flex-direction: column;
-  padding: 30px 20px;
-  gap: 20px;
-
-  z-index: 999;
-}
-  /* Mostrar cuando está activo */
-  .nav-menu.active {
-    display: flex;
-  }
-
-  /* Links en columna */
-  .nav-links {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-
-@media (max-width: 768px) {
-
-  .dropdown-menu {
-    position: static;
-    display: none;
-    padding-left: 10px;
-  }
-
-  .dropdown-menu li {
-    padding: 8px 0;
-  }
-
-  .dropdown.open .dropdown-menu {
-    display: block;
-  }
-
-}
-.dropdown-trigger {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.dropdown-icon {
-  font-size: 12px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.dropdown.open .dropdown-icon {
-  transform: rotate(180deg);
-}
-
-
-
-/* MENU */
-
-
-
+/* ============================= */
+/* MENU DESKTOP */
+/* ============================= */
 
 .nav-links {
   list-style: none;
@@ -296,14 +225,15 @@ section {
   background: var(--gradiente-marca);
 }
 
-
-/* Active state */
+/* Active */
 .nav-links a.active {
   color: #2f3b8f;
   font-weight: 600;
 }
 
-/* Dropdown */
+/* ============================= */
+/* DROPDOWN DESKTOP */
+/* ============================= */
 
 .dropdown-menu {
   position: absolute;
@@ -330,13 +260,15 @@ section {
   display: block;
 }
 
-/* Mostrar dropdown al hover */
+/* Mostrar dropdown en hover */
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
 }
 
-/* BOTÓN section-CONTACTO */
+/* ============================= */
+/* BOTÓN CONTACTO */
+/* ============================= */
 
 .btn-nav {
   padding: 10px 18px;
@@ -350,6 +282,59 @@ section {
   color: #ffffff;
 }
 
+/* ============================= */
+/* RESPONSIVE MOBILE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* Mostrar hamburguesa */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Ocultar menú */
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: white;
+    display: none;
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+    z-index: 999;
+  }
+
+  /* Mostrar menú activo */
+  .nav-menu.active {
+    display: flex;
+  }
+
+  /* Links en columna */
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Dropdown en mobile */
+  .dropdown-menu {
+    position: static;
+    display: none;
+    padding-left: 10px;
+  }
+
+  .dropdown-menu li {
+    padding: 8px 0;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+}
 /* HOME */
 
 
