@@ -3281,51 +3281,205 @@ ul li::before {
 }
 
 /* ============================= */
-/* SUB BLOQUES DENTRO DE PROGRAMA */
+/* SCERTIFICACIÓ DEPORTIVA INTEGRAL*/
 /* ============================= */
 .programa-subbloque {
-  max-width: 700px;
-  margin: -60px auto 170px auto;
-  padding: 35px 30px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  max-width: 720px;
+  margin: -40px auto 100px auto;
+
+  padding: 40px 35px;
+
+  background: linear-gradient(180deg, #ffffff, #fafafa);
+  border-radius: 18px;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.05);
+
   text-align: center;
-  transition: all 0.3s ease;
-  margin-top: 25px;
-}
-.programa-subbloque:hover {
-  transform:  translateY(-4px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+
+  transition: all 0.35s ease;
 }
 
-.programa-subbloque h4 {
-  font-size: 20px;
+.programa-subbloque:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.08);
+}
+
+/* TAG */
+.tag-certificacion {
+  display: inline-block;
   margin-bottom: 12px;
+  padding: 6px 14px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  background: rgba(183,110,0,0.1);
+  color: #b76e00;
+
+  border-radius: 999px;
+}
+
+/* TITULO */
+.programa-subbloque h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
   color: #2f3b8f;
 }
 
+/* TEXTO */
 .programa-subbloque p {
   font-size: 15px;
   color: #555;
   line-height: 1.6;
+  margin-bottom: 10px;
 }
-.programa-subbloque .sub-extra {
+
+/* TEXTO SECUNDARIO */
+.sub-extra {
+  font-size: 14px;
+  color: #666;
+}
+
+/* LISTA */
+.sub-lista {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sub-lista li {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.sub-lista li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2f3b8f;
+}
+
+/* CIERRE */
+.sub-cierre {
   margin-top: 15px;
-  font-size: 13.5px;
+  font-style: italic;
+  font-size: 14px;
   color: #777;
 }
 
+/* LINEA SUPERIOR */
 .programa-subbloque::before {
   content: "";
   display: block;
-  width: 40px;
+  width: 35px;
   height: 3px;
   background: var(--gradiente-marca);
   margin: 0 auto 15px auto;
   border-radius: 2px;
 }
 
+/* =====================================================
+   🔹 BLOQUE AVANZADO- COACHES CERTIFICADOS (DISTINCIÓN)
+===================================================== */
+
+
+/* =====================================================
+   🔹 HEADER SECCIÓN AVANZADA
+===================================================== */
+
+.bloque-avanzado-header {
+  text-align: center;
+  margin-top: 140px;
+  margin-bottom: 40px;
+}
+
+.bloque-avanzado-header p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Tag refinada */
+.tag-avanzado {
+  display: inline-block;
+  padding: 6px 14px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+
+  border-radius: 999px;
+
+  background: rgba(47, 59, 143, 0.08);
+  color: #2f3b8f;
+
+  text-transform: uppercase;
+}
+
+.bloque-avanzado {
+  margin-top: 120px; /* 🔥 separación real */
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fafbff 100%
+  );
+
+  border: 1px solid rgba(47, 59, 143, 0.08);
+  border-radius: 20px;
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.06);
+
+  padding: 60px 40px;
+}
+
+.bloque-avanzado .programa-tag {
+  background: rgba(47, 59, 143, 0.08);
+  color: #2f3b8f;
+
+  font-size: 11px;
+  letter-spacing: 0.5px;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  margin-bottom: 12px;
+
+  text-transform: uppercase;
+}
+
+.bloque-avanzado .programa-imagen {
+  display: flex;
+  justify-content: center;
+}
+
+.bloque-avanzado .bloque-img {
+  width: 100%;
+  max-width: 420px;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  background: #fff;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.bloque-avanzado::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+
+  background: var(--gradiente-marca);
+
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
 
 
 
@@ -3390,6 +3544,445 @@ ul li::before {
   margin-bottom: 25px;
   color: #666;
 }
+
+/* =====================================================
+   🔹 PRÓXIMAS FORMACIONES
+===================================================== */
+
+.proximas-formaciones {
+  padding: 120px 20px;
+  background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+}
+
+/* HEADER */
+
+.proximas-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.proximas-header h2 {
+  font-size: 28px;
+  margin: 12px 0;
+}
+
+.proximas-header .intro {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* TAG HEADER */
+
+.tag-header {
+  background: rgba(47, 59, 143, 0.08);
+  color: #2f3b8f;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+/* LISTA */
+
+.proximas-lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ITEM */
+
+.proxima-item {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #eee;
+
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover sutil */
+
+.proxima-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+/* TAG ITEM */
+
+.proxima-item .tag {
+  display: inline-block;
+  background: #fff4e6;
+  color: #b76e00;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* TÍTULO */
+
+.proxima-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* TEXTO */
+
+.proxima-item p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   🔹 MICRO DETALLE PRO (línea superior)
+===================================================== */
+
+.proxima-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 40px;
+  height: 3px;
+  background: var(--gradiente-marca);
+  border-radius: 2px;
+}
+
+/* =====================================================
+   🔹 MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .proximas-formaciones {
+    padding: 80px 16px;
+  }
+
+  .proximas-header h2 {
+    font-size: 24px;
+  }
+
+  .proximas-header .intro {
+    font-size: 14px;
+  }
+
+  .proximas-lista {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .proxima-item {
+    padding: 22px;
+  }
+
+  .proxima-item h3 {
+    font-size: 16px;
+  }
+
+  .proxima-item p {
+    font-size: 13.5px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   🔹 PAGINA INTERNA PARA COACHES CERTIFICADOS
+===================================================== */
+
+
+/* =====================================================
+   🔹 PAGINA INTERNA PARA COACHES CERTIFICADOS ( MENU SECUNDAIRO )
+===================================================== */
+
+.breadcrumb {
+  max-width: 1000px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+
+  font-size: 13px;
+  color: #888;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #666;
+  transition: 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: #2f3b8f;
+}
+
+.breadcrumb .current {
+  color: #222;
+  font-weight: 500;
+}
+
+
+
+/* =====================================================
+   🔹 HERO (PÁGINA INTERNA - CERTIFICADOS)
+===================================================== */
+
+.breadcrumb {
+  max-width: 1000px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+
+  font-size: 13px;
+  color: #888;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #666;
+  transition: 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: #2f3b8f;
+}
+
+.breadcrumb .current {
+  color: #222;
+  font-weight: 500;
+}
+
+
+
+.avanzado-hero {
+  padding: 120px 20px 60px;
+  text-align: center;
+}
+
+.avanzado-hero h1 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.avanzado-hero p {
+  max-width: 600px;
+  margin: 10px auto 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.tag-avanzado {
+  display: inline-block;
+  background: #fff4e6;
+  color: #b76e00;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   🔹 INTRO / FRASE PUENTE
+===================================================== */
+.intro-avanzado {
+  text-align: center;
+  max-width: 650px;
+  margin: 20px auto 60px;
+  color: #666;
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   🔹 GRID DETALLE (páginas internas)
+===================================================== */
+.detalle-formaciones {
+  margin-top: 80px;
+  padding: 100px 20px;
+}
+
+.detalle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.detalle-formaciones.avanzadas {
+  background: radial-gradient(
+    circle at top,
+    rgba(47, 59, 143, 0.04),
+    transparent 60%
+  )
+}
+
+/* =====================================================
+   🔹 CARDS INTERNAS (VERSIÓN PREMIUM)
+===================================================== */
+.detalle-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fafbff 100%);
+  padding: 45px 35px;
+  border-radius: 18px;
+  max-width: 420px;
+  border: 1px solid #eee;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow sutil */
+.detalle-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(47, 59, 143, 0.06),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover */
+.detalle-card:hover::before {
+  opacity: 1;
+}
+
+.detalle-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.10);
+  transform: none;
+  box-shadow: none;
+
+
+}
+.detalle-card h3 {
+  font-size: 21px;
+  font-weight: 600;
+  color: #222;
+}
+
+.detalle-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.detalle-card ul {
+  margin-bottom: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.detalle-card ul li {
+  font-size: 13.5px;
+  color: #444;
+  margin-bottom: 8px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.detalle-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2f3b8f;
+}
+.detalle-card .btn-primary {
+  display: block;
+  margin: 20px auto 0 auto;
+  text-align: center;
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.detalle-card:nth-child(1) {
+  border-top: 3px solid rgba(47, 59, 143, 0.15);
+}
+
+.detalle-card:nth-child(2) {
+  border-top: 3px solid rgba(183, 110, 0, 0.15);
+}
+
+.card-intro {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 13.5px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.card-cierre {
+  font-size: 13px;
+  font-style: italic;
+  color: #777;
+  margin-top: 10px;
+}
+/* ============================= */
+/* TAGS DE CARD */
+/* ============================= */
+
+.card-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* Variante 1 */
+.card-tag.especializacion {
+  background: rgba(47, 59, 143, 0.08);
+  color: #2f3b8f;
+}
+
+/* Variante 2 */
+.card-tag.entrenamiento {
+  background: rgba(183, 110, 0, 0.08);
+  color: #b76e00;
+}
+
 
 
 /* ============================= */
@@ -3506,6 +4099,121 @@ ul li::before {
 .btn-secondary:hover {
   background: #2f3b8f;
   color: #fff;
+}
+/* =====================================================
+   📱 RESPONSIVE MOBILE (max-width: 768px)
+   Página: Coaches Certificados
+===================================================== */
+
+  /* =====================================================
+     🔹 Hmenu secundario 
+  ===================================================== */
+@media (max-width: 768px) {
+
+  .breadcrumb {
+    font-size: 12px;
+    gap: 6px;
+  
+}
+
+
+  /* =====================================================
+     🔹 HERO
+  ===================================================== */
+
+
+
+  .avanzado-hero {
+    padding: 80px 20px 40px;
+  }
+
+  .avanzado-hero h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .avanzado-hero p {
+    font-size: 15px;
+  }
+
+  .tag-avanzado {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+
+  /* =====================================================
+     🔹 INTRO / FRASE PUENTE
+  ===================================================== */
+
+  .intro-avanzado {
+    font-size: 14px;
+    margin: 10px auto 40px;
+    padding: 0 10px;
+    line-height: 1.6;
+  }
+
+
+  /* =====================================================
+     🔹 SECCIÓN GENERAL
+  ===================================================== */
+
+  .detalle-formaciones {
+    padding: 60px 15px;
+    margin-top: 40px;
+  }
+
+
+  /* =====================================================
+     🔹 GRID (1 columna en mobile)
+  ===================================================== */
+
+  .detalle-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+
+  /* =====================================================
+     🔹 CARDS INTERNAS
+  ===================================================== */
+
+  .detalle-card {
+    padding: 25px 20px;
+    border-radius: 14px;
+  }
+
+  .detalle-card h3 {
+    font-size: 18px;
+  }
+
+  .detalle-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .detalle-card ul {
+    margin-bottom: 20px;
+  }
+
+  .detalle-card ul li {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+
+  /* =====================================================
+     🔹 BOTONES (FULL WIDTH)
+  ===================================================== */
+
+  .detalle-card .btn-primary {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    font-size: 14px;
+  }
+
 }
 
 
