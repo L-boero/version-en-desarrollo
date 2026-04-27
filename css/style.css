@@ -3185,11 +3185,72 @@ ul li::before {
 
   .experiencia-item {
     height: 180px;
+    position: relative;
   }
 
 }
+/* ============================= */
+/* EXPERIENCIA EN ACCIÓN */
+/* ============================= */
 
+.experiencia {
+  margin: 80px 0;
+  text-align: center;
+}
 
+.experiencia h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+/* GRID */
+.experiencia-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ITEM */
+.experiencia-item {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+
+  height: 180px; /* 🔥 controlamos altura manual */
+}
+
+/* VIDEO */
+.experiencia-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* IMAGEN */
+.experiencia-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 🔥 clave */
+  display: block;
+}
+
+/* HOVER SUAVE */
+.experiencia-item:hover {
+  transform: translateY(-4px);
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+
+  .experiencia-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experiencia-item {
+    height: 200px;
+  }
+
+}
 
 /* ============================= */
 /* PROGRAMAS FORMATIVOS */
@@ -3380,6 +3441,185 @@ ul li::before {
   background: var(--gradiente-marca);
   margin: 0 auto 15px auto;
   border-radius: 2px;
+}
+/* ============================= */
+/* TESTIMONIO VIDEO */
+/* ============================= */
+
+.testimonio-video {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.testimonio-video img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.testimonio-video:hover img {
+  transform: scale(1.05);
+}
+
+/* PLAY */
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0,0,0,0.2);
+  backdrop-filter: blur(2px);
+
+  transition: all 0.3s ease;
+}
+
+.play-overlay span {
+  font-size: 40px;
+  color: #fff;
+}
+
+.testimonio-video:hover .play-overlay {
+  background: rgba(0,0,0,0.35);
+}
+
+/* ============================= */
+/* TESTIMONIO DEPORTIVO */
+/* ============================= */
+.testimonio-img {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* ⬅️ más chico */
+  margin: 40px auto; /* menos aire */
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+/* IMAGEN */
+.testimonio-img img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center 10%; /* 🔥 ajusta el foco */
+  display: block;
+}
+
+/* OVERLAY */
+.testimonio-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 22px;
+
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.25),
+    transparent
+  );
+
+  color: #fff;
+}
+/* TITULO */
+.testimonio-overlay h4 {
+  font-size: 18px; /* ⬅️ más chico */
+  margin-bottom: 6px;
+  color: white;
+}
+
+/* TEXTO */
+.testimonio-overlay p {
+  font-size: 13px;
+  max-width: 320px;
+  margin-bottom: 6px;
+  color: white;
+}
+
+/* AUTOR */
+.testimonio-autor {
+  font-size: 11px;
+  opacity: 0.8;
+ 
+}
+.testimonio-autor p {
+   color: white;
+
+}
+
+/* TAG */
+.tag-testimonio {
+  font-size: 11px;
+  padding: 4px 10px;
+}
+.btn-testimonio:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.testimonio-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.testimonio-img {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.testimonio-img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.12);
+}
+.testimonio-content{
+  background-color: #3b4cca;
+  border-radius: 12px;
+}
+
+/* CTA sutil */
+.ver-mas {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* MOBILE TESTIMONIO DEPORTISTA*/
+@media (max-width: 768px) {
+
+  .testimonio-deportivo {
+    margin: 80px 16px;
+  }
+
+  .testimonio-hero img {
+    height: 320px;
+  }
+
+  .testimonio-overlay {
+    padding: 20px;
+  }
+
+  .testimonio-overlay h4 {
+    font-size: 18px;
+  }
+
+  .testimonio-overlay p {
+    font-size: 14px;
+  }
+
+  .btn-testimonio {
+    font-size: 12px;
+    padding: 9px 14px;
+  }
+
 }
 
 /* =====================================================
@@ -3736,7 +3976,9 @@ ul li::before {
   color: #222;
   font-weight: 500;
 }
-
+#card-deportivo {
+  scroll-margin-top: 100px; /* ajustalo según tu header */
+}
 
 
 /* =====================================================

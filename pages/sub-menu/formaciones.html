@@ -404,17 +404,38 @@
     <!-- BLOQUE 3 COMPLETO CAPACITACION- EXPERIENCIA -->
     <!-- ===================== -->
 
-    <div class="experiencia">
-      <h3>Experiencia en acción</h3>
+    <<div class="experiencia">
 
-      <div class="experiencia-grid">
-        <div class="experiencia-item"></div>
-        <div class="experiencia-item"></div>
-        <div class="experiencia-item"></div>
-      </div>
+  <h3>Experiencia en acción</h3>
+
+  <div class="experiencia-grid">
+
+    <!-- VIDEO 1 -->
+    <div class="experiencia-item">
+      <video controls preload="metadata">
+        <source src="../../assets/video/testimonio1.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="experiencia-item">
+      <video controls preload="metadata">
+        <source src="../../assets/video/testimonio2.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+
+    <!-- TESTIMONIO INSTAGRAM -->
+    <div class="experiencia-item">
+      <a href="https://www.instagram.com/reel/DQ-UJg4EWsG/?igsh=MWN6anpjZDAxOHlydg==" target="_blank">
+        <img src="../../assets/img/IMG_4985.jpg" alt="Testimonio coaching deportivo">
+      </a>
     </div>
 
   </div>
+
+</div>
 
 <div class="programa-cta">
   <a href="https://wa.me/543424661203" target="_blank" class="btn-primary">
@@ -450,7 +471,7 @@
     <!-- PROGRAMA 1 -->
     <!-- ===================== -->
 
-    <div class="programa-bloque">
+    <div class="programa-bloque" >
 
       <div class="programa-imagen">
         <div class="imagen-placeholder bloque-img">
@@ -519,13 +540,41 @@
   </p>
 
 </div>
+<!-- ===================== -->
+<!-- TESTIMONIO DEPORTIVO -->
+<!-- ===================== -->
+<a href="https://www.instagram.com/reel/DQ-UJg4EWsG/" target="_blank" class="testimonio-link">
 
+  <div class="testimonio-img">
+
+    <img src="../../assets/img/260B603C-2419-4502-A497-E6F12F7BA8B1 2.PNG" alt="Testimonio deportista">
+
+    <div class="testimonio-overlay">
+      <span class="tag-testimonio">Experiencia real</span>
+
+      <h4>De 4ta a Primera división</h4>
+
+      <p>
+        “Hoy compito con otra mentalidad.”
+      </p>
+
+      <span class="testimonio-autor">
+        <p> Jugador profesional · Primera división</p>
+      
+      </span>
+
+      <span class="ver-mas">Ver historia →</span>
+    </div>
+
+  </div>
+
+</a>
 
     <!-- ===================== -->
     <!-- PROGRAMAS PARA COACHES CERTIFICADOS -->
     <!-- ===================== -->
      
-    <div class="bloque-avanzado-header">
+    <div class="bloque-avanzado-header" id="card-deportivo" >
   <span class="tag-avanzado">Nivel avanzado</span>
   <p>Para coaches que ya completaron su formación inicial</p>
 </div>
@@ -703,6 +752,26 @@ Conversemos y diseñemos un proceso a tu medida, alineado a tus objetivos.
   });
 
 </script>
+
+  ...
+  </section>
+
+  <!-- TESTIMONIO / MODAL ya está arriba -->
+
+  <!-- JS SIEMPRE AL FINAL -->
+  <script>
+    function abrirVideo() {
+      document.getElementById("modalVideo").classList.add("active");
+    }
+
+    function cerrarVideo() {
+      document.getElementById("modalVideo").classList.remove("active");
+    }
+  </script>
+
+</body>
+
+
 
 </body>
 </html>
