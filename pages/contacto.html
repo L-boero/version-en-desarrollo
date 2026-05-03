@@ -6,6 +6,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../index.html">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCX3G9KSPC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCX3G9KSPC');
+</script>
+
 </head>
 <body>
   <!-- MENU NAV -->
@@ -39,7 +50,7 @@
             <li><a href="./sub-menu/coachingindi.html">Coaching Individual</a></li>
             <li><a href="./sub-menu/trabajoequip.html">Trabajo con Equipos</a></li>
             <li><a href="./sub-menu/formaciones.html">Formaciones</a></li>
-            <li><a href="./sub-menu/page-interna.html"></a></li>
+            <li><a href="./sub-menu/page-interna.html"></a>Coaches certificados</li>
           </ul>
         </li>
 
@@ -72,12 +83,15 @@
       <p class="contacto-highlight">
         Estamos para acompañarte en tu proceso
       </p>
-
-     <a href="https://wa.me/5493424661203?text=Hola,%20vengo%20desde%20la%20web%20y%20quiero%20más%20información"
+<a href="https://wa.me/5493424661203?text=Hola,%20vengo%20desde%20la%20web%20y%20quiero%20más%20información"
    target="_blank"
-   class="btn-whatsapp">
+   class="btn-whatsapp"
+   onclick="gtag('event', 'click_whatsapp', {
+     'event_category': 'conversion',
+     'event_label': 'contacto'
+   });">
   Hablar por WhatsApp
-   </a>
+</a>
 
       <p class="contacto-note">
         Respondemos dentro de las 24 hs

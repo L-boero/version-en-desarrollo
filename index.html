@@ -20,6 +20,17 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./pages/acompañamiento/">
     
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCX3G9KSPC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCX3G9KSPC');
+</script>
+
+
 
     
 </head>
@@ -89,7 +100,11 @@
 Acompañamos a personas, equipos y deportistas a lograr resultados reales,
 transformando su forma de pensar, sentir y actuar.
 </p>
-    <a href="https://wa.me/543424661203" target="_blank" class="hero-cta btn">
+   <a href="https://wa.me/543424661203" target="_blank" class="hero-cta btn"
+onclick="gtag('event', 'click_whatsapp', {
+  'event_category': 'conversion',
+  'event_label': 'hero_principal'
+});">
   Quiero más información
 </a>
 </section>
@@ -214,7 +229,11 @@ transformando su forma de pensar, sentir y actuar.
 <p>
 Conversemos y diseñemos un proceso a tu medida, alineado a tus objetivos.
 </p>
-   <a href="https://wa.me/543424661203" target="_blank" class="btn-primary">
+   <a href="https://wa.me/543424661203" target="_blank" class="btn-primary"
+onclick="gtag('event', 'click_whatsapp', {
+  'event_category': 'conversion',
+  'event_label': 'footer'
+});">
   Agendar una conversación
 </a>
   </div>
